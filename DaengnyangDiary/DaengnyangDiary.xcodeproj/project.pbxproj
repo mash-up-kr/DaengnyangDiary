@@ -23,6 +23,9 @@
 		CE975D6D27088C9400FA2050 /* CoverEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D6A27088C9400FA2050 /* CoverEditViewController.swift */; };
 		CE975D7027089B5100FA2050 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE975D6F27089B5100FA2050 /* Color.xcassets */; };
 		CE975D7327089E9A00FA2050 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D7227089E9A00FA2050 /* UIColor+.swift */; };
+		CE975D752708A36500FA2050 /* CreateBadgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D742708A36500FA2050 /* CreateBadgeSelectionViewController.swift */; };
+		CE975D772708A3C100FA2050 /* CreateBadgeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D762708A3C100FA2050 /* CreateBadgeSelectionViewModel.swift */; };
+		CE975D7A2708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D792708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift */; };
 		ED4C56B3C976FCE0AF67F942 /* Pods_DaengnyangDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1EF9502F28CC9B63FCEC4F /* Pods_DaengnyangDiary.framework */; };
 		FFAE3E732708C73A00B2CC77 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAE3E722708C73A00B2CC77 /* Image.xcassets */; };
 		FFAE3E752708C7F700B2CC77 /* imageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E742708C7F700B2CC77 /* imageAsset.swift */; };
@@ -52,6 +55,9 @@
 		CE975D7227089E9A00FA2050 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		FFAE3E722708C73A00B2CC77 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		FFAE3E742708C7F700B2CC77 /* imageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageAsset.swift; sourceTree = "<group>"; };
+		CE975D742708A36500FA2050 /* CreateBadgeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBadgeSelectionViewController.swift; sourceTree = "<group>"; };
+		CE975D762708A3C100FA2050 /* CreateBadgeSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBadgeSelectionViewModel.swift; sourceTree = "<group>"; };
+		CE975D792708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBadgeSelectionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				CE975D5D27088C7300FA2050 /* CreateViewModel.swift */,
+				CE975D762708A3C100FA2050 /* CreateBadgeSelectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				CE975D5F27088C7300FA2050 /* CreateViewController.swift */,
+				CE975D742708A36500FA2050 /* CreateBadgeSelectionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -209,6 +217,7 @@
 		CE975D6027088C7300FA2050 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE975D782708B02500FA2050 /* Cell */,
 				CE975D6127088C7300FA2050 /* Create.storyboard */,
 			);
 			path = View;
@@ -245,6 +254,14 @@
 				FFAE3E742708C7F700B2CC77 /* imageAsset.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		CE975D782708B02500FA2050 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D792708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,11 +405,14 @@
 				CE975D5B27088BE600FA2050 /* MainViewModel.swift in Sources */,
 				FFAE3E752708C7F700B2CC77 /* imageAsset.swift in Sources */,
 				CE975D6327088C7300FA2050 /* CreateViewController.swift in Sources */,
+				CE975D7A2708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift in Sources */,
 				CE975D532708885E00FA2050 /* BasicService.swift in Sources */,
 				CE975D6D27088C9400FA2050 /* CoverEditViewController.swift in Sources */,
 				CE975D6B27088C9400FA2050 /* CoverEditViewModel.swift in Sources */,
 				CE975D3F2707FACD00FA2050 /* MainViewController.swift in Sources */,
+				CE975D772708A3C100FA2050 /* CreateBadgeSelectionViewModel.swift in Sources */,
 				CE975D3B2707FACD00FA2050 /* AppDelegate.swift in Sources */,
+				CE975D752708A36500FA2050 /* CreateBadgeSelectionViewController.swift in Sources */,
 				CE975D5027084D7300FA2050 /* NetworkProvider.swift in Sources */,
 				CE975D7327089E9A00FA2050 /* UIColor+.swift in Sources */,
 			);
