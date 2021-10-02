@@ -30,7 +30,7 @@ final class WebContainerViewController: UIViewController {
         self.webView?.customUserAgent = ""
     }
 
-    private var urlPath: String? = "https://deploy-preview-6--eclass-webview.netlify.app"
+    private var urlPath: String? = "https://deploy-preview-8--eclass-webview.netlify.app/"
 
     @IBOutlet private weak var webView: DaengnyangWebView?
 

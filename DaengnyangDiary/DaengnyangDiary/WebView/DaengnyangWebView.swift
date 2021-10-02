@@ -15,7 +15,6 @@ final class DaengnyangWebView: WKWebView {
         self.setupDelegates()
         self.setupProperties()
         self.setupConfiguration()
-        self.setupObserver()
     }
 
     required init?(coder: NSCoder) {
@@ -23,11 +22,6 @@ final class DaengnyangWebView: WKWebView {
         self.setupDelegates()
         self.setupProperties()
         self.setupConfiguration()
-        self.setupObserver()
-    }
-
-    deinit {
-        self.resetObserver()
     }
 
     override func willMove(toSuperview newSuperview: UIView?) {
@@ -66,16 +60,6 @@ final class DaengnyangWebView: WKWebView {
         self.configuration.allowsInlineMediaPlayback = true
         self.configuration.mediaTypesRequiringUserActionForPlayback = []
         self.configuration.userContentController = WKUserContentController()
-    }
-
-    private func setupObserver() {
-        let keyPath = #keyPath(WKWebView.isLoading)
-        self.addObserver(self, forKeyPath: keyPath, options: [.new, .initial], context: nil)
-    }
-
-    private func resetObserver() {
-        let keyPath = #keyPath(WKWebView.isLoading)
-        self.removeObserver(self, forKeyPath: keyPath)
     }
 
     private static let javaScriptMessageName = ""
