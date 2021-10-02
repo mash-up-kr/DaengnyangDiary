@@ -12,9 +12,13 @@
 		CE975D422707FACD00FA2050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE975D402707FACD00FA2050 /* Main.storyboard */; };
 		CE975D442707FACE00FA2050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE975D432707FACE00FA2050 /* Assets.xcassets */; };
 		CE975D472707FACE00FA2050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE975D452707FACE00FA2050 /* LaunchScreen.storyboard */; };
+		ED4C56B3C976FCE0AF67F942 /* Pods_DaengnyangDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1EF9502F28CC9B63FCEC4F /* Pods_DaengnyangDiary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1EF9502F28CC9B63FCEC4F /* Pods_DaengnyangDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaengnyangDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		664A97504CB91B17558B4729 /* Pods-DaengnyangDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaengnyangDiary.debug.xcconfig"; path = "Target Support Files/Pods-DaengnyangDiary/Pods-DaengnyangDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		8C081AFD5517449BF0C9DE9A /* Pods-DaengnyangDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaengnyangDiary.release.xcconfig"; path = "Target Support Files/Pods-DaengnyangDiary/Pods-DaengnyangDiary.release.xcconfig"; sourceTree = "<group>"; };
 		CE975D372707FACD00FA2050 /* DaengnyangDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaengnyangDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE975D3A2707FACD00FA2050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE975D3E2707FACD00FA2050 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4C56B3C976FCE0AF67F942 /* Pods_DaengnyangDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18330EFF210A8720C289A1DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				664A97504CB91B17558B4729 /* Pods-DaengnyangDiary.debug.xcconfig */,
+				8C081AFD5517449BF0C9DE9A /* Pods-DaengnyangDiary.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9B01A02D42AC723BD94BB815 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E1EF9502F28CC9B63FCEC4F /* Pods_DaengnyangDiary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE975D2E2707FACD00FA2050 = {
 			isa = PBXGroup;
 			children = (
 				CE975D392707FACD00FA2050 /* DaengnyangDiary */,
 				CE975D382707FACD00FA2050 /* Products */,
+				18330EFF210A8720C289A1DC /* Pods */,
+				9B01A02D42AC723BD94BB815 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE975D4B2707FACE00FA2050 /* Build configuration list for PBXNativeTarget "DaengnyangDiary" */;
 			buildPhases = (
+				27BBA4F62AB8AC7B86E53F21 /* [CP] Check Pods Manifest.lock */,
 				CE975D332707FACD00FA2050 /* Sources */,
 				CE975D342707FACD00FA2050 /* Frameworks */,
 				CE975D352707FACD00FA2050 /* Resources */,
+				5CE3C501F50CC66D4AACDBAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27BBA4F62AB8AC7B86E53F21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DaengnyangDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CE3C501F50CC66D4AACDBAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DaengnyangDiary/Pods-DaengnyangDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DaengnyangDiary/Pods-DaengnyangDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DaengnyangDiary/Pods-DaengnyangDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE975D332707FACD00FA2050 /* Sources */ = {
@@ -279,6 +348,7 @@
 		};
 		CE975D4C2707FACE00FA2050 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 664A97504CB91B17558B4729 /* Pods-DaengnyangDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,6 +369,7 @@
 		};
 		CE975D4D2707FACE00FA2050 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C081AFD5517449BF0C9DE9A /* Pods-DaengnyangDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
