@@ -21,6 +21,8 @@
 		CE975D6B27088C9400FA2050 /* CoverEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D6627088C9400FA2050 /* CoverEditViewModel.swift */; };
 		CE975D6C27088C9400FA2050 /* CoverEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE975D6827088C9400FA2050 /* CoverEdit.storyboard */; };
 		CE975D6D27088C9400FA2050 /* CoverEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D6A27088C9400FA2050 /* CoverEditViewController.swift */; };
+		CE975D7027089B5100FA2050 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE975D6F27089B5100FA2050 /* Color.xcassets */; };
+		CE975D7327089E9A00FA2050 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D7227089E9A00FA2050 /* UIColor+.swift */; };
 		ED4C56B3C976FCE0AF67F942 /* Pods_DaengnyangDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1EF9502F28CC9B63FCEC4F /* Pods_DaengnyangDiary.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		CE975D6627088C9400FA2050 /* CoverEditViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverEditViewModel.swift; sourceTree = "<group>"; };
 		CE975D6827088C9400FA2050 /* CoverEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoverEdit.storyboard; sourceTree = "<group>"; };
 		CE975D6A27088C9400FA2050 /* CoverEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverEditViewController.swift; sourceTree = "<group>"; };
+		CE975D6F27089B5100FA2050 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		CE975D7227089E9A00FA2050 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				CE975D5127084E3000FA2050 /* Supporting Files */,
+				CE975D7127089E8100FA2050 /* Extension */,
 				CE975D4E27084CC800FA2050 /* Network */,
 				CE975D5527088A0500FA2050 /* Main */,
 				CE975D54270889C900FA2050 /* Create */,
@@ -119,6 +124,7 @@
 		CE975D5127084E3000FA2050 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE975D6F27089B5100FA2050 /* Color.xcassets */,
 				CE975D432707FACE00FA2050 /* Assets.xcassets */,
 				CE975D482707FACE00FA2050 /* Info.plist */,
 			);
@@ -227,6 +233,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		CE975D7127089E8100FA2050 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D7227089E9A00FA2050 /* UIColor+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +305,7 @@
 				CE975D472707FACE00FA2050 /* LaunchScreen.storyboard in Resources */,
 				CE975D442707FACE00FA2050 /* Assets.xcassets in Resources */,
 				CE975D422707FACD00FA2050 /* Main.storyboard in Resources */,
+				CE975D7027089B5100FA2050 /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +367,7 @@
 				CE975D3F2707FACD00FA2050 /* MainViewController.swift in Sources */,
 				CE975D3B2707FACD00FA2050 /* AppDelegate.swift in Sources */,
 				CE975D5027084D7300FA2050 /* NetworkProvider.swift in Sources */,
+				CE975D7327089E9A00FA2050 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
