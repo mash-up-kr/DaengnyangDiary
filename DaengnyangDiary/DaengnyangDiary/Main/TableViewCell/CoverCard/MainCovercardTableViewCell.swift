@@ -15,16 +15,7 @@ class MainCovercardTableViewCell: UITableViewCell {
     let cellWidth: CGFloat = 290
     let cellHeight: CGFloat = 395
     
-    
     var currentIndex: CGFloat = 0
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     override func layoutSubviews() {
         setCollectionView()
@@ -45,7 +36,6 @@ class MainCovercardTableViewCell: UITableViewCell {
         collectionView.delegate = self
         
         // 스크롤 시 빠르게 감속 되도록 설정
-        // 💩 약간 부자연스러움
         collectionView.decelerationRate = .fast
         
         collectionView.registerNibCell(MainCoverCardCollectionViewCell.self)

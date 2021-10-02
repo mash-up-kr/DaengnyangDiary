@@ -17,7 +17,6 @@ class MainViewController: UIViewController {
         registerCells()
     }
     
-    
     // MARK: - Func
     private func registerCells() {
         tableView.registerNibCell(MainHeaderTableViewCell.self)
@@ -31,13 +30,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        switch tableViewCell(rawValue: indexPath.row) {
+        case .MainHeaderTableViewCell:
             let cell = tableView.dequeueReusable(MainHeaderTableViewCell.self, for: indexPath)
             return cell
-        } else if indexPath.row == 1 {
+        case .MainCovercardTableViewCell:
             let cell = tableView.dequeueReusable(MainCovercardTableViewCell.self, for: indexPath)
             return cell
+        case .none:
+            return UITableViewCell()
         }
-        return UITableViewCell()
+    }
+    
+    enum tableViewCell: Int {
+        case MainHeaderTableViewCell
+        case MainCovercardTableViewCell
     }
 }

@@ -10,11 +10,6 @@ import UIKit
 class MainCoverCardCollectionViewCell: UICollectionViewCell {
     private var cardView = UIView() // 공통 뷰로 만들거지만 그냥 임시
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     override func layoutSubviews() {
         super.layoutSubviews()
         setConfigureUI()
