@@ -24,6 +24,8 @@
 		CE975D7027089B5100FA2050 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE975D6F27089B5100FA2050 /* Color.xcassets */; };
 		CE975D7327089E9A00FA2050 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D7227089E9A00FA2050 /* UIColor+.swift */; };
 		ED4C56B3C976FCE0AF67F942 /* Pods_DaengnyangDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1EF9502F28CC9B63FCEC4F /* Pods_DaengnyangDiary.framework */; };
+		FFAE3E732708C73A00B2CC77 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAE3E722708C73A00B2CC77 /* Image.xcassets */; };
+		FFAE3E752708C7F700B2CC77 /* imageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E742708C7F700B2CC77 /* imageAsset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		CE975D6A27088C9400FA2050 /* CoverEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverEditViewController.swift; sourceTree = "<group>"; };
 		CE975D6F27089B5100FA2050 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		CE975D7227089E9A00FA2050 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		FFAE3E722708C73A00B2CC77 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		FFAE3E742708C7F700B2CC77 /* imageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageAsset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 			children = (
 				CE975D6F27089B5100FA2050 /* Color.xcassets */,
 				CE975D432707FACE00FA2050 /* Assets.xcassets */,
+				FFAE3E722708C73A00B2CC77 /* Image.xcassets */,
 				CE975D482707FACE00FA2050 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -237,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				CE975D7227089E9A00FA2050 /* UIColor+.swift */,
+				FFAE3E742708C7F700B2CC77 /* imageAsset.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 			buildConfigurationList = CE975D4B2707FACE00FA2050 /* Build configuration list for PBXNativeTarget "DaengnyangDiary" */;
 			buildPhases = (
 				27BBA4F62AB8AC7B86E53F21 /* [CP] Check Pods Manifest.lock */,
+				FFAE3E712708C6C300B2CC77 /* SwiftGen */,
 				CE975D332707FACD00FA2050 /* Sources */,
 				CE975D342707FACD00FA2050 /* Frameworks */,
 				CE975D352707FACD00FA2050 /* Resources */,
@@ -305,6 +312,7 @@
 				CE975D472707FACE00FA2050 /* LaunchScreen.storyboard in Resources */,
 				CE975D442707FACE00FA2050 /* Assets.xcassets in Resources */,
 				CE975D422707FACD00FA2050 /* Main.storyboard in Resources */,
+				FFAE3E732708C73A00B2CC77 /* Image.xcassets in Resources */,
 				CE975D7027089B5100FA2050 /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +359,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DaengnyangDiary/Pods-DaengnyangDiary-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FFAE3E712708C6C300B2CC77 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n   swiftgen xcassets \"${SRCROOT}/${TARGETNAME}/Supporting Files/Image.xcassets\" -t swift4 -o \"${SRCROOT}/${TARGETNAME}/Extension/imageAsset.swift\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -360,6 +386,7 @@
 			files = (
 				CE975D6227088C7300FA2050 /* CreateViewModel.swift in Sources */,
 				CE975D5B27088BE600FA2050 /* MainViewModel.swift in Sources */,
+				FFAE3E752708C7F700B2CC77 /* imageAsset.swift in Sources */,
 				CE975D6327088C7300FA2050 /* CreateViewController.swift in Sources */,
 				CE975D532708885E00FA2050 /* BasicService.swift in Sources */,
 				CE975D6D27088C9400FA2050 /* CoverEditViewController.swift in Sources */,

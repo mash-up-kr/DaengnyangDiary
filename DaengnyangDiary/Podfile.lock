@@ -20,6 +20,7 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.3)
   - SnapKit (5.0.1)
+  - SwiftGen (6.4.0)
 
 DEPENDENCIES:
   - Kingfisher
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - RxDataSources (~> 4.0)
   - RxSwift (~> 5)
   - SnapKit
+  - SwiftGen
 
 SPEC REPOS:
   trunk:
@@ -41,6 +43,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
+    - SwiftGen
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
@@ -52,7 +55,8 @@ SPEC CHECKSUMS:
   RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
   RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
 
-PODFILE CHECKSUM: 43417e3411c07e97ecac26c4cdf88680becc3594
+PODFILE CHECKSUM: 332f0851f2823838ae6a51b82347be8fec42397d
 
 COCOAPODS: 1.10.1

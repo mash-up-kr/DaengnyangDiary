@@ -13,5 +13,6 @@ target 'DaengnyangDiary' do
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'SnapKit'
   pod 'Kingfisher'
+  pod 'SwiftGen'
 
 end
