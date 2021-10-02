@@ -3,15 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CE975D3B2707FACD00FA2050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D3A2707FACD00FA2050 /* AppDelegate.swift */; };
-		CE975D3F2707FACD00FA2050 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D3E2707FACD00FA2050 /* ViewController.swift */; };
+		CE975D3F2707FACD00FA2050 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D3E2707FACD00FA2050 /* MainViewController.swift */; };
 		CE975D422707FACD00FA2050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE975D402707FACD00FA2050 /* Main.storyboard */; };
 		CE975D442707FACE00FA2050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE975D432707FACE00FA2050 /* Assets.xcassets */; };
 		CE975D472707FACE00FA2050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE975D452707FACE00FA2050 /* LaunchScreen.storyboard */; };
+		CE975D5027084D7300FA2050 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D4F27084D7300FA2050 /* NetworkProvider.swift */; };
+		CE975D532708885E00FA2050 /* BasicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D522708885E00FA2050 /* BasicService.swift */; };
+		CE975D5B27088BE600FA2050 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D5A27088BE600FA2050 /* MainViewModel.swift */; };
+		CE975D6227088C7300FA2050 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D5D27088C7300FA2050 /* CreateViewModel.swift */; };
+		CE975D6327088C7300FA2050 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D5F27088C7300FA2050 /* CreateViewController.swift */; };
+		CE975D6427088C7300FA2050 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE975D6127088C7300FA2050 /* Create.storyboard */; };
+		CE975D6B27088C9400FA2050 /* CoverEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D6627088C9400FA2050 /* CoverEditViewModel.swift */; };
+		CE975D6C27088C9400FA2050 /* CoverEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE975D6827088C9400FA2050 /* CoverEdit.storyboard */; };
+		CE975D6D27088C9400FA2050 /* CoverEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D6A27088C9400FA2050 /* CoverEditViewController.swift */; };
 		ED4C56B3C976FCE0AF67F942 /* Pods_DaengnyangDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1EF9502F28CC9B63FCEC4F /* Pods_DaengnyangDiary.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +30,20 @@
 		8C081AFD5517449BF0C9DE9A /* Pods-DaengnyangDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaengnyangDiary.release.xcconfig"; path = "Target Support Files/Pods-DaengnyangDiary/Pods-DaengnyangDiary.release.xcconfig"; sourceTree = "<group>"; };
 		CE975D372707FACD00FA2050 /* DaengnyangDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaengnyangDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE975D3A2707FACD00FA2050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE975D3E2707FACD00FA2050 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE975D3E2707FACD00FA2050 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE975D412707FACD00FA2050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE975D432707FACE00FA2050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE975D462707FACE00FA2050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE975D482707FACE00FA2050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE975D4F27084D7300FA2050 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		CE975D522708885E00FA2050 /* BasicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicService.swift; sourceTree = "<group>"; };
+		CE975D5A27088BE600FA2050 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CE975D5D27088C7300FA2050 /* CreateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
+		CE975D5F27088C7300FA2050 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		CE975D6127088C7300FA2050 /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
+		CE975D6627088C9400FA2050 /* CoverEditViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverEditViewModel.swift; sourceTree = "<group>"; };
+		CE975D6827088C9400FA2050 /* CoverEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoverEdit.storyboard; sourceTree = "<group>"; };
+		CE975D6A27088C9400FA2050 /* CoverEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +64,6 @@
 				664A97504CB91B17558B4729 /* Pods-DaengnyangDiary.debug.xcconfig */,
 				8C081AFD5517449BF0C9DE9A /* Pods-DaengnyangDiary.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,14 +96,135 @@
 		CE975D392707FACD00FA2050 /* DaengnyangDiary */ = {
 			isa = PBXGroup;
 			children = (
+				CE975D5127084E3000FA2050 /* Supporting Files */,
+				CE975D4E27084CC800FA2050 /* Network */,
+				CE975D5527088A0500FA2050 /* Main */,
+				CE975D54270889C900FA2050 /* Create */,
+				CE975D5627088A3400FA2050 /* CoverEdit */,
 				CE975D3A2707FACD00FA2050 /* AppDelegate.swift */,
-				CE975D3E2707FACD00FA2050 /* ViewController.swift */,
-				CE975D402707FACD00FA2050 /* Main.storyboard */,
-				CE975D432707FACE00FA2050 /* Assets.xcassets */,
 				CE975D452707FACE00FA2050 /* LaunchScreen.storyboard */,
-				CE975D482707FACE00FA2050 /* Info.plist */,
 			);
 			path = DaengnyangDiary;
+			sourceTree = "<group>";
+		};
+		CE975D4E27084CC800FA2050 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D4F27084D7300FA2050 /* NetworkProvider.swift */,
+				CE975D522708885E00FA2050 /* BasicService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CE975D5127084E3000FA2050 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D432707FACE00FA2050 /* Assets.xcassets */,
+				CE975D482707FACE00FA2050 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE975D54270889C900FA2050 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D6027088C7300FA2050 /* View */,
+				CE975D5E27088C7300FA2050 /* ViewController */,
+				CE975D5C27088C7300FA2050 /* ViewModel */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		CE975D5527088A0500FA2050 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D5727088B8700FA2050 /* ViewModel */,
+				CE975D5927088BC800FA2050 /* ViewController */,
+				CE975D5827088B9C00FA2050 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE975D5627088A3400FA2050 /* CoverEdit */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D6727088C9400FA2050 /* View */,
+				CE975D6927088C9400FA2050 /* ViewController */,
+				CE975D6527088C9400FA2050 /* ViewModel */,
+			);
+			path = CoverEdit;
+			sourceTree = "<group>";
+		};
+		CE975D5727088B8700FA2050 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D5A27088BE600FA2050 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE975D5827088B9C00FA2050 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D402707FACD00FA2050 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE975D5927088BC800FA2050 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D3E2707FACD00FA2050 /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE975D5C27088C7300FA2050 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D5D27088C7300FA2050 /* CreateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE975D5E27088C7300FA2050 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D5F27088C7300FA2050 /* CreateViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE975D6027088C7300FA2050 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D6127088C7300FA2050 /* Create.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE975D6527088C9400FA2050 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D6627088C9400FA2050 /* CoverEditViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE975D6727088C9400FA2050 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D6827088C9400FA2050 /* CoverEdit.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE975D6927088C9400FA2050 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D6A27088C9400FA2050 /* CoverEditViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +286,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE975D6427088C7300FA2050 /* Create.storyboard in Resources */,
+				CE975D6C27088C9400FA2050 /* CoverEdit.storyboard in Resources */,
 				CE975D472707FACE00FA2050 /* LaunchScreen.storyboard in Resources */,
 				CE975D442707FACE00FA2050 /* Assets.xcassets in Resources */,
 				CE975D422707FACD00FA2050 /* Main.storyboard in Resources */,
@@ -203,8 +343,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE975D3F2707FACD00FA2050 /* ViewController.swift in Sources */,
+				CE975D6227088C7300FA2050 /* CreateViewModel.swift in Sources */,
+				CE975D5B27088BE600FA2050 /* MainViewModel.swift in Sources */,
+				CE975D6327088C7300FA2050 /* CreateViewController.swift in Sources */,
+				CE975D532708885E00FA2050 /* BasicService.swift in Sources */,
+				CE975D6D27088C9400FA2050 /* CoverEditViewController.swift in Sources */,
+				CE975D6B27088C9400FA2050 /* CoverEditViewModel.swift in Sources */,
+				CE975D3F2707FACD00FA2050 /* MainViewController.swift in Sources */,
 				CE975D3B2707FACD00FA2050 /* AppDelegate.swift in Sources */,
+				CE975D5027084D7300FA2050 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +501,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQ7B74WTDR;
-				INFOPLIST_FILE = DaengnyangDiary/Info.plist;
+				INFOPLIST_FILE = "DaengnyangDiary/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,7 +522,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQ7B74WTDR;
-				INFOPLIST_FILE = DaengnyangDiary/Info.plist;
+				INFOPLIST_FILE = "DaengnyangDiary/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
