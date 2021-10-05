@@ -6,20 +6,40 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
+protocol MainCovercardTableViewCellDelegate: AnyObject {
+    func didTapSelectYearButton()
+}
 class MainCovercardTableViewCell: UITableViewCell {
     @IBOutlet weak var selectYearButton: UIButton!
     @IBOutlet weak var thisMonthShadowView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let cellWidth: CGFloat = 290
-    let cellHeight: CGFloat = 395
+    private let disposeBag = DisposeBag()
+    
+    private let cellWidth: CGFloat = 290
+    private let cellHeight: CGFloat = 395
     
     var currentIndex: CGFloat = 0
+    weak var delegate: MainCovercardTableViewCellDelegate?
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         setCollectionView()
         setBackgroundView()
+        bindViews()
+    }
+    
+    // MARK: - bind
+    private func bindViews() {
+        selectYearButton.rx.tap
+            .observeOn(MainScheduler.instance)
+            .bind{ [weak self] in
+                self?.didTapSelectYearButton()
+            }
+            .disposed(by: self.disposeBag)
     }
     
     // MARK: - Func
@@ -43,6 +63,10 @@ class MainCovercardTableViewCell: UITableViewCell {
     
     private func setBackgroundView() {
         thisMonthShadowView.setCornerRadius(radius: 24)
+    }
+    
+    private func didTapSelectYearButton() {
+        delegate?.didTapSelectYearButton()
     }
 }
 

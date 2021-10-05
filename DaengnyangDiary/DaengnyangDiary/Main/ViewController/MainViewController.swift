@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  DaengnyangDiary
 //
-//  Created by Ethan on 2021/10/02.
+//  Created by Yoojin Park on 2021/10/02.
 //
 
 import UIKit
@@ -36,6 +36,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .MainCovercardTableViewCell:
             let cell = tableView.dequeueReusable(MainCovercardTableViewCell.self, for: indexPath)
+            cell.delegate = self
             return cell
         case .none:
             return UITableViewCell()
@@ -45,5 +46,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     enum tableViewCell: Int {
         case MainHeaderTableViewCell
         case MainCovercardTableViewCell
+    }
+}
+
+extension MainViewController: MainCovercardTableViewCellDelegate {
+    func didTapSelectYearButton() {
+        let vc = MainDatePickerViewController.instantiate()
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
     }
 }

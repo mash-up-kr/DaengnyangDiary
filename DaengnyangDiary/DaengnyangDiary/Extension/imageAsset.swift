@@ -18,6 +18,7 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let closeX = ImageAsset(name: "closeX")
   internal static let down = ImageAsset(name: "down")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

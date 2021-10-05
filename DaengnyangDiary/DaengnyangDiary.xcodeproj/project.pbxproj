@@ -38,6 +38,11 @@
 		FFAE3E772708CC5300B2CC77 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E762708CC5300B2CC77 /* DateExtension.swift */; };
 		FFAE3E792708CE0E00B2CC77 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E782708CE0E00B2CC77 /* UIViewExtension.swift */; };
 		FFAE3E7A2708D1A000B2CC77 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D7227089E9A00FA2050 /* UIColor+.swift */; };
+		FFAE3E7C2708DD0800B2CC77 /* MainCovercardTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E7B2708DD0800B2CC77 /* MainCovercardTableViewModel.swift */; };
+		FFAE3E7E270900AE00B2CC77 /* MainDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E7D270900AE00B2CC77 /* MainDatePickerViewController.swift */; };
+		FFAE3E80270902A400B2CC77 /* MainDatePickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAE3E7F270902A400B2CC77 /* MainDatePickerViewController.storyboard */; };
+		FFAE3E822709032000B2CC77 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E812709032000B2CC77 /* UIViewControllerExtension.swift */; };
+		FFAE3E852709064B00B2CC77 /* MainDatePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E842709064B00B2CC77 /* MainDatePickerDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +80,11 @@
 		FFAE3E742708C7F700B2CC77 /* imageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageAsset.swift; sourceTree = "<group>"; };
 		FFAE3E762708CC5300B2CC77 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		FFAE3E782708CE0E00B2CC77 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		FFAE3E7B2708DD0800B2CC77 /* MainCovercardTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCovercardTableViewModel.swift; sourceTree = "<group>"; };
+		FFAE3E7D270900AE00B2CC77 /* MainDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDatePickerViewController.swift; sourceTree = "<group>"; };
+		FFAE3E7F270902A400B2CC77 /* MainDatePickerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainDatePickerViewController.storyboard; sourceTree = "<group>"; };
+		FFAE3E812709032000B2CC77 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		FFAE3E842709064B00B2CC77 /* MainDatePickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDatePickerDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +185,7 @@
 				CE975D5727088B8700FA2050 /* ViewModel */,
 				CE975D5927088BC800FA2050 /* ViewController */,
 				CE975D5827088B9C00FA2050 /* View */,
+				FFAE3E832709055100B2CC77 /* PickerView */,
 				FFAE3E4E27089B8700B2CC77 /* TableViewCell */,
 			);
 			path = Main;
@@ -276,6 +287,7 @@
 			children = (
 				FFAE3E5D27089D6E00B2CC77 /* MainCovercardTableViewCell.swift */,
 				FFAE3E5E27089D6E00B2CC77 /* MainCovercardTableViewCell.xib */,
+				FFAE3E7B2708DD0800B2CC77 /* MainCovercardTableViewModel.swift */,
 				FFAE3E6D2708C2EE00B2CC77 /* CustomButton */,
 				FFAE3E642708A9CE00B2CC77 /* Cell */,
 			);
@@ -300,6 +312,7 @@
 				FFAE3E742708C7F700B2CC77 /* imageAsset.swift */,
 				FFAE3E762708CC5300B2CC77 /* DateExtension.swift */,
 				FFAE3E782708CE0E00B2CC77 /* UIViewExtension.swift */,
+				FFAE3E812709032000B2CC77 /* UIViewControllerExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -319,6 +332,16 @@
 				FFAE3E6E2708C31900B2CC77 /* SelectYearButton.swift */,
 			);
 			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		FFAE3E832709055100B2CC77 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				FFAE3E842709064B00B2CC77 /* MainDatePickerDataSource.swift */,
+				FFAE3E7D270900AE00B2CC77 /* MainDatePickerViewController.swift */,
+				FFAE3E7F270902A400B2CC77 /* MainDatePickerViewController.storyboard */,
+			);
+			path = PickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +411,7 @@
 				CE975D472707FACE00FA2050 /* LaunchScreen.storyboard in Resources */,
 				CE975D442707FACE00FA2050 /* Assets.xcassets in Resources */,
 				FFAE3E682708AA9100B2CC77 /* MainCoverCardCollectionViewCell.xib in Resources */,
+				FFAE3E80270902A400B2CC77 /* MainDatePickerViewController.storyboard in Resources */,
 				CE975D422707FACD00FA2050 /* Main.storyboard in Resources */,
 				FFAE3E732708C73A00B2CC77 /* Image.xcassets in Resources */,
 				CE975D7027089B5100FA2050 /* Color.xcassets in Resources */,
@@ -465,9 +489,12 @@
 				FFAE3E4D270899F200B2CC77 /* UITableViewExtension.swift in Sources */,
 				CE975D5B27088BE600FA2050 /* MainViewModel.swift in Sources */,
 				FFAE3E752708C7F700B2CC77 /* imageAsset.swift in Sources */,
+				FFAE3E7E270900AE00B2CC77 /* MainDatePickerViewController.swift in Sources */,
 				CE975D6327088C7300FA2050 /* CreateViewController.swift in Sources */,
 				FFAE3E6A2708AB1700B2CC77 /* UICollectionViewExtension.swift in Sources */,
+				FFAE3E822709032000B2CC77 /* UIViewControllerExtension.swift in Sources */,
 				CE975D532708885E00FA2050 /* BasicService.swift in Sources */,
+				FFAE3E7C2708DD0800B2CC77 /* MainCovercardTableViewModel.swift in Sources */,
 				CE975D6D27088C9400FA2050 /* CoverEditViewController.swift in Sources */,
 				CE975D6B27088C9400FA2050 /* CoverEditViewModel.swift in Sources */,
 				FFAE3E7A2708D1A000B2CC77 /* UIColor+.swift in Sources */,
@@ -476,6 +503,7 @@
 				FFAE3E672708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift in Sources */,
 				FFAE3E5727089CD000B2CC77 /* MainHeaderTableViewCell.swift in Sources */,
 				FFAE3E792708CE0E00B2CC77 /* UIViewExtension.swift in Sources */,
+				FFAE3E852709064B00B2CC77 /* MainDatePickerDataSource.swift in Sources */,
 				FFAE3E772708CC5300B2CC77 /* DateExtension.swift in Sources */,
 				CE975D3B2707FACD00FA2050 /* AppDelegate.swift in Sources */,
 				CE975D5027084D7300FA2050 /* NetworkProvider.swift in Sources */,

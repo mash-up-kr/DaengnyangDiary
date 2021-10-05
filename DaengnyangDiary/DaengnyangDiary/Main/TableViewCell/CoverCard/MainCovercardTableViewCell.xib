@@ -57,6 +57,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="collectionView" destination="Dcc-jl-Stk" id="qNj-Nj-06B"/>
                 <outlet property="selectYearButton" destination="SuU-kd-yHa" id="RaP-w5-Nk3"/>
