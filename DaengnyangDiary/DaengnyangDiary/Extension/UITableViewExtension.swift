@@ -19,3 +19,17 @@ extension UITableView {
         return cell
     }
 }
+
+protocol MyProtocol {
+    var value: UIViewController { get }
+}
+
+extension UIViewController : MyProtocol {  var value: UIViewController { return self } }
+
+class Container<T: MyProtocol> {
+    var values: [T]
+
+    init(_ values: T...) {
+        self.values = values
+    }
+}

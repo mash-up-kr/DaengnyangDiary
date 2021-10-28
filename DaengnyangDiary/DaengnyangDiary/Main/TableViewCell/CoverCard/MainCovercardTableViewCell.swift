@@ -9,21 +9,30 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-protocol MainCovercardTableViewCellDelegate: AnyObject {
-    func didTapSelectYearButton()
-}
 class MainCovercardTableViewCell: UITableViewCell {
-    @IBOutlet weak var selectYearButton: UIButton!
+    @IBOutlet weak var selectYearButton: SelectYearButton!
     @IBOutlet weak var thisMonthShadowView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    private let disposeBag = DisposeBag()
     
     private let cellWidth: CGFloat = 290
     private let cellHeight: CGFloat = 395
     
+    var selectedYear = PublishRelay<String>()
+    
+    var isPickerViewOpening = PublishRelay<Bool>()
+    
+    var disposeBag = DisposeBag()
+    
     var currentIndex: CGFloat = 0
-    weak var delegate: MainCovercardTableViewCellDelegate?
+    
+    func setData(flag: PublishRelay<Bool>) {
+        isPickerViewOpening = flag
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -34,12 +43,22 @@ class MainCovercardTableViewCell: UITableViewCell {
     
     // MARK: - bind
     private func bindViews() {
-        selectYearButton.rx.tap
-            .observeOn(MainScheduler.instance)
-            .bind{ [weak self] in
-                self?.didTapSelectYearButton()
+        isPickerViewOpening
+            .bind { [weak self] isOpened in
+                self?.selectYearButton.isClicked(isOpened)
             }
-            .disposed(by: self.disposeBag)
+            .disposed(by: disposeBag)
+        
+        selectedYear
+            .bind { [weak self] year in
+                self?.selectYearButton.setYear(year)
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    // MARK: - Action
+    @IBAction func yearButtonClick(_ sender: Any) {
+        isPickerViewOpening.accept(true)
     }
     
     // MARK: - Func
@@ -63,10 +82,6 @@ class MainCovercardTableViewCell: UITableViewCell {
     
     private func setBackgroundView() {
         thisMonthShadowView.setCornerRadius(radius: 24)
-    }
-    
-    private func didTapSelectYearButton() {
-        delegate?.didTapSelectYearButton()
     }
 }
 

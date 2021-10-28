@@ -13,7 +13,7 @@ class MainDatePickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewData
     
     let yearList: [String] = {
         let calendar = Calendar.current
-        let count: Int = calendar.component(.year, from: Date()) - 2000 + 1
+        let count: Int = calendar.component(.year, from: Date()) - 2000 + 1 // 2000년도 부터 다이어리 볼 수 있도록 함
         var yearList: [String] = []
         for i in 0..<count {
             yearList.append("\(2000 + i)")
@@ -21,7 +21,7 @@ class MainDatePickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewData
         return yearList
     }()
     
-    let selectedName = PublishSubject<String>()
+    var selectedYear = PublishRelay<String>()
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -37,8 +37,7 @@ class MainDatePickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewData
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let name = yearList[row]
-        selectedName.onNext(name)
+        let year = yearList[row]
+        selectedYear.accept(year)
     }
-    
 }

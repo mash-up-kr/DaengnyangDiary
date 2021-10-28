@@ -38,7 +38,7 @@ class SelectYearButton: UIButton {
         yearLabel.textColor = #colorLiteral(red: 0.2823529412, green: 0.2784313725, blue: 0.2784313725, alpha: 1)
         
         vectorImageView = UIImageView()
-        vectorImageView.image = Asset.down.image
+        vectorImageView.image = Asset.arrowDown.image
         
         addSubview(vectorImageView)
         vectorImageView.snp.makeConstraints { maker in
@@ -50,5 +50,9 @@ class SelectYearButton: UIButton {
     
     func setYear(_ year: String) {
         yearLabel.text = year
+    }
+    
+    func isClicked(_ isClicked: Bool) {
+        vectorImageView.image = isClicked ? Asset.arrowUp.image : Asset.arrowDown.image
     }
 }
