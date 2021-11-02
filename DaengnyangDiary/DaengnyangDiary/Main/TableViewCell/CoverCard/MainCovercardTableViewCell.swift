@@ -11,7 +11,6 @@ import RxSwift
 
 class MainCovercardTableViewCell: UITableViewCell {
     @IBOutlet weak var selectYearButton: SelectYearButton!
-    @IBOutlet weak var thisMonthShadowView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let cellWidth: CGFloat = 290
@@ -31,13 +30,12 @@ class MainCovercardTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        disposeBag = DisposeBag()
+        disposeBag = DisposeBag() // 이전 구독한 것이 강제로 재설정되고 새 스트림이 설정
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         setCollectionView()
-        setBackgroundView()
         bindViews()
     }
     
@@ -78,10 +76,6 @@ class MainCovercardTableViewCell: UITableViewCell {
         collectionView.decelerationRate = .fast
         
         collectionView.registerNibCell(MainCoverCardCollectionViewCell.self)
-    }
-    
-    private func setBackgroundView() {
-        thisMonthShadowView.setCornerRadius(radius: 24)
     }
 }
 

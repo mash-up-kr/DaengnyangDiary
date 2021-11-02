@@ -31,6 +31,7 @@ final class MainViewController: UIViewController {
     private func registerCells() {
         tableView.registerNibCell(MainHeaderTableViewCell.self)
         tableView.registerNibCell(MainCovercardTableViewCell.self)
+        tableView.registerNibCell(MainScheduleListTableViewCell.self)
     }
     
     // MARK: - Bind
@@ -40,9 +41,13 @@ final class MainViewController: UIViewController {
     }
     
     func bindTableView() {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 500
+        
         let observableCell = Observable<[tableViewCell]>.just([
             .MainHeaderTableViewCell,
-            .MainCovercardTableViewCell(viewModel.isPickerViewOpened)
+            .MainCovercardTableViewCell(viewModel.isPickerViewOpened),
+            .MainScheduleListTableViewCell
         ])
         
         observableCell.bind(to: tableView.rx.items) { (tableView: UITableView, index: Int, element: tableViewCell) in
@@ -56,6 +61,9 @@ final class MainViewController: UIViewController {
                 cell.isPickerViewOpening = isOpened
                 cell.selectedYear = self.viewModel.selectedYear
                 #warning("여기서 isOpened가 왜 자꾸 자동으로 isPickerViewOpening과 서로 상호작용하는 것처럼 움직이는 건지 궁금")
+                return cell
+            case .MainScheduleListTableViewCell:
+                let cell = tableView.dequeueReusable(MainScheduleListTableViewCell.self, for: indexPath)
                 return cell
             }
         }
@@ -86,6 +94,7 @@ final class MainViewController: UIViewController {
     enum tableViewCell {
         case MainHeaderTableViewCell
         case MainCovercardTableViewCell(_ isPickerViewOpened: PublishRelay<Bool>)
+        case MainScheduleListTableViewCell
     }
 }
 

@@ -32,7 +32,7 @@
 		FFAE3E672708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E652708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift */; };
 		FFAE3E682708AA9100B2CC77 /* MainCoverCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFAE3E662708AA9100B2CC77 /* MainCoverCardCollectionViewCell.xib */; };
 		FFAE3E6A2708AB1700B2CC77 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E692708AB1700B2CC77 /* UICollectionViewExtension.swift */; };
-		FFAE3E6F2708C31900B2CC77 /* SelectYearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E6E2708C31900B2CC77 /* SelectYearButton.swift */; };
+		FFAE3E6F2708C31900B2CC77 /* ShowPickerViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E6E2708C31900B2CC77 /* ShowPickerViewButton.swift */; };
 		FFAE3E732708C73A00B2CC77 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAE3E722708C73A00B2CC77 /* Image.xcassets */; };
 		FFAE3E772708CC5300B2CC77 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E762708CC5300B2CC77 /* DateExtension.swift */; };
 		FFAE3E792708CE0E00B2CC77 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E782708CE0E00B2CC77 /* UIViewExtension.swift */; };
@@ -43,6 +43,11 @@
 		FFAE3E822709032000B2CC77 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E812709032000B2CC77 /* UIViewControllerExtension.swift */; };
 		FFAE3E852709064B00B2CC77 /* MainDatePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E842709064B00B2CC77 /* MainDatePickerDataSource.swift */; };
 		FFB857FF272A6E73001B12A1 /* imageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB857FE272A6E73001B12A1 /* imageAsset.swift */; };
+		FFB85801272F753B001B12A1 /* MyPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB85800272F753B001B12A1 /* MyPageButton.swift */; };
+		FFB85807272F7DD9001B12A1 /* MainScheduleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB85805272F7DD9001B12A1 /* MainScheduleListTableViewCell.swift */; };
+		FFB85808272F7DD9001B12A1 /* MainScheduleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFB85806272F7DD9001B12A1 /* MainScheduleListTableViewCell.xib */; };
+		FFB8580F272FA55F001B12A1 /* ScheduleCheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8580E272FA55F001B12A1 /* ScheduleCheckListView.swift */; };
+		FFB8581C2730D4EA001B12A1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8581B2730D4EA001B12A1 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +80,7 @@
 		FFAE3E652708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoverCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFAE3E662708AA9100B2CC77 /* MainCoverCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCoverCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		FFAE3E692708AB1700B2CC77 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
-		FFAE3E6E2708C31900B2CC77 /* SelectYearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectYearButton.swift; sourceTree = "<group>"; };
+		FFAE3E6E2708C31900B2CC77 /* ShowPickerViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPickerViewButton.swift; sourceTree = "<group>"; };
 		FFAE3E722708C73A00B2CC77 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		FFAE3E762708CC5300B2CC77 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		FFAE3E782708CE0E00B2CC77 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -85,6 +90,11 @@
 		FFAE3E812709032000B2CC77 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		FFAE3E842709064B00B2CC77 /* MainDatePickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDatePickerDataSource.swift; sourceTree = "<group>"; };
 		FFB857FE272A6E73001B12A1 /* imageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageAsset.swift; sourceTree = "<group>"; };
+		FFB85800272F753B001B12A1 /* MyPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageButton.swift; sourceTree = "<group>"; };
+		FFB85805272F7DD9001B12A1 /* MainScheduleListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScheduleListTableViewCell.swift; sourceTree = "<group>"; };
+		FFB85806272F7DD9001B12A1 /* MainScheduleListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScheduleListTableViewCell.xib; sourceTree = "<group>"; };
+		FFB8580E272FA55F001B12A1 /* ScheduleCheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCheckListView.swift; sourceTree = "<group>"; };
+		FFB8581B2730D4EA001B12A1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,7 @@
 				FFAE3E612708A14300B2CC77 /* Extension */,
 				CE975D5127084E3000FA2050 /* Supporting Files */,
 				CE975D4E27084CC800FA2050 /* Network */,
+				FFB8580C272F8020001B12A1 /* Custom */,
 				CE975D5527088A0500FA2050 /* Main */,
 				CE975D54270889C900FA2050 /* Create */,
 				CE975D5627088A3400FA2050 /* CoverEdit */,
@@ -278,6 +289,7 @@
 			children = (
 				FFAE3E5427089CB400B2CC77 /* Header */,
 				FFAE3E4F27089B9500B2CC77 /* CoverCard */,
+				FFB85803272F7D2E001B12A1 /*  ScheduleList */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -288,7 +300,6 @@
 				FFAE3E5D27089D6E00B2CC77 /* MainCovercardTableViewCell.swift */,
 				FFAE3E5E27089D6E00B2CC77 /* MainCovercardTableViewCell.xib */,
 				FFAE3E7B2708DD0800B2CC77 /* MainCovercardTableViewModel.swift */,
-				FFAE3E6D2708C2EE00B2CC77 /* CustomButton */,
 				FFAE3E642708A9CE00B2CC77 /* Cell */,
 			);
 			path = CoverCard;
@@ -313,6 +324,7 @@
 				FFAE3E762708CC5300B2CC77 /* DateExtension.swift */,
 				FFAE3E782708CE0E00B2CC77 /* UIViewExtension.swift */,
 				FFAE3E812709032000B2CC77 /* UIViewControllerExtension.swift */,
+				FFB8581B2730D4EA001B12A1 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -326,14 +338,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		FFAE3E6D2708C2EE00B2CC77 /* CustomButton */ = {
-			isa = PBXGroup;
-			children = (
-				FFAE3E6E2708C31900B2CC77 /* SelectYearButton.swift */,
-			);
-			path = CustomButton;
-			sourceTree = "<group>";
-		};
 		FFAE3E832709055100B2CC77 /* PickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +346,25 @@
 				FFAE3E7F270902A400B2CC77 /* MainDatePickerViewController.storyboard */,
 			);
 			path = PickerView;
+			sourceTree = "<group>";
+		};
+		FFB85803272F7D2E001B12A1 /*  ScheduleList */ = {
+			isa = PBXGroup;
+			children = (
+				FFB85805272F7DD9001B12A1 /* MainScheduleListTableViewCell.swift */,
+				FFB85806272F7DD9001B12A1 /* MainScheduleListTableViewCell.xib */,
+			);
+			path = " ScheduleList";
+			sourceTree = "<group>";
+		};
+		FFB8580C272F8020001B12A1 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				FFB85800272F753B001B12A1 /* MyPageButton.swift */,
+				FFAE3E6E2708C31900B2CC77 /* ShowPickerViewButton.swift */,
+				FFB8580E272FA55F001B12A1 /* ScheduleCheckListView.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +429,7 @@
 			files = (
 				FFAE3E6027089D6E00B2CC77 /* MainCovercardTableViewCell.xib in Resources */,
 				CE975D6427088C7300FA2050 /* Create.storyboard in Resources */,
+				FFB85808272F7DD9001B12A1 /* MainScheduleListTableViewCell.xib in Resources */,
 				FFAE3E5827089CD000B2CC77 /* MainHeaderTableViewCell.xib in Resources */,
 				CE975D6C27088C9400FA2050 /* CoverEdit.storyboard in Resources */,
 				CE975D472707FACE00FA2050 /* LaunchScreen.storyboard in Resources */,
@@ -493,6 +517,7 @@
 				FFAE3E6A2708AB1700B2CC77 /* UICollectionViewExtension.swift in Sources */,
 				FFAE3E822709032000B2CC77 /* UIViewControllerExtension.swift in Sources */,
 				CE975D532708885E00FA2050 /* BasicService.swift in Sources */,
+				FFB8581C2730D4EA001B12A1 /* StringExtension.swift in Sources */,
 				FFAE3E7C2708DD0800B2CC77 /* MainCovercardTableViewModel.swift in Sources */,
 				CE975D6D27088C9400FA2050 /* CoverEditViewController.swift in Sources */,
 				CE975D6B27088C9400FA2050 /* CoverEditViewModel.swift in Sources */,
@@ -502,12 +527,15 @@
 				FFAE3E672708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift in Sources */,
 				FFAE3E5727089CD000B2CC77 /* MainHeaderTableViewCell.swift in Sources */,
 				FFAE3E792708CE0E00B2CC77 /* UIViewExtension.swift in Sources */,
+				FFB85801272F753B001B12A1 /* MyPageButton.swift in Sources */,
 				FFAE3E852709064B00B2CC77 /* MainDatePickerDataSource.swift in Sources */,
 				FFAE3E772708CC5300B2CC77 /* DateExtension.swift in Sources */,
 				CE975D3B2707FACD00FA2050 /* AppDelegate.swift in Sources */,
+				FFB8580F272FA55F001B12A1 /* ScheduleCheckListView.swift in Sources */,
 				CE975D5027084D7300FA2050 /* NetworkProvider.swift in Sources */,
-				FFAE3E6F2708C31900B2CC77 /* SelectYearButton.swift in Sources */,
+				FFAE3E6F2708C31900B2CC77 /* ShowPickerViewButton.swift in Sources */,
 				FFB857FF272A6E73001B12A1 /* imageAsset.swift in Sources */,
+				FFB85807272F7DD9001B12A1 /* MainScheduleListTableViewCell.swift in Sources */,
 				FFAE3E632708A14300B2CC77 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

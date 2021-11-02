@@ -24,6 +24,6 @@ class MainCoverCardCollectionViewCell: UICollectionViewCell {
             make.trailing.equalToSuperview()
         }
         cardView.setCornerRadius(radius: 24)
-        cardView.backgroundColor = UIColor.orange
+        cardView.backgroundColor = UIColor.white
     }
 }

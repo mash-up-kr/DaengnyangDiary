@@ -8,4 +8,5 @@
 import UIKit
 
 class MainHeaderTableViewCell: UITableViewCell {
+    @IBOutlet weak var myPageButton: MyPageButton!
 }
