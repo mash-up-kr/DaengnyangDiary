@@ -327,6 +327,10 @@
 			isa = PBXGroup;
 			children = (
 				CE975D792708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FFAE3E642708A9CE00B2CC77 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +364,8 @@
 				CE975D822708DA5100FA2050 /* WebContainerViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
 		FFAE3E6D2708C2EE00B2CC77 /* CustomButton */ = {
 			isa = PBXGroup;
 			children = (
