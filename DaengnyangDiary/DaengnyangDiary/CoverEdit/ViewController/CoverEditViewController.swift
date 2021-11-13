@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CoverEditViewController: UIViewController {
+final class CoverEditViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
