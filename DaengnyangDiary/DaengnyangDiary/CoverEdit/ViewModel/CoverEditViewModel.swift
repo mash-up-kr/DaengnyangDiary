@@ -7,6 +7,6 @@
 
 import Foundation
 
-class CoverEditViewModel {
+final class CoverEditViewModel {
     
 }
