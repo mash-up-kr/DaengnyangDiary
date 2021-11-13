@@ -26,6 +26,9 @@
 		CE975D752708A36500FA2050 /* CreateBadgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D742708A36500FA2050 /* CreateBadgeSelectionViewController.swift */; };
 		CE975D772708A3C100FA2050 /* CreateBadgeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D762708A3C100FA2050 /* CreateBadgeSelectionViewModel.swift */; };
 		CE975D7A2708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D792708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift */; };
+		CE975D7D2708D5CA00FA2050 /* DaengnyangWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D7C2708D5CA00FA2050 /* DaengnyangWebView.swift */; };
+		CE975D802708DA1B00FA2050 /* WebContainerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE975D7F2708DA1B00FA2050 /* WebContainerView.storyboard */; };
+		CE975D832708DA5100FA2050 /* WebContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D822708DA5100FA2050 /* WebContainerViewController.swift */; };
 		ED4C56B3C976FCE0AF67F942 /* Pods_DaengnyangDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1EF9502F28CC9B63FCEC4F /* Pods_DaengnyangDiary.framework */; };
 		FFAE3E4D270899F200B2CC77 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E4C270899F200B2CC77 /* UITableViewExtension.swift */; };
 		FFAE3E5727089CD000B2CC77 /* MainHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E5527089CD000B2CC77 /* MainHeaderTableViewCell.swift */; };
@@ -80,6 +83,11 @@
 		CE975D742708A36500FA2050 /* CreateBadgeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBadgeSelectionViewController.swift; sourceTree = "<group>"; };
 		CE975D762708A3C100FA2050 /* CreateBadgeSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBadgeSelectionViewModel.swift; sourceTree = "<group>"; };
 		CE975D792708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBadgeSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		CE975D7C2708D5CA00FA2050 /* DaengnyangWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaengnyangWebView.swift; sourceTree = "<group>"; };
+		CE975D7F2708DA1B00FA2050 /* WebContainerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebContainerView.storyboard; sourceTree = "<group>"; };
+		CE975D822708DA5100FA2050 /* WebContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContainerViewController.swift; sourceTree = "<group>"; };
+		FFAE3E722708C73A00B2CC77 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		FFAE3E742708C7F700B2CC77 /* imageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageAsset.swift; sourceTree = "<group>"; };
 		FFAE3E762708CC5300B2CC77 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		FFAE3E782708CE0E00B2CC77 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +142,7 @@
 		CE975D392707FACD00FA2050 /* DaengnyangDiary */ = {
 			isa = PBXGroup;
 			children = (
+				CE975D7B2708D59A00FA2050 /* WebView */,
 				FFAE3E612708A14300B2CC77 /* Extension */,
 				CE975D5127084E3000FA2050 /* Supporting Files */,
 				CE975D4E27084CC800FA2050 /* Network */,
@@ -318,6 +327,10 @@
 			isa = PBXGroup;
 			children = (
 				CE975D792708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FFAE3E642708A9CE00B2CC77 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +338,32 @@
 				FFAE3E662708AA9100B2CC77 /* MainCoverCardCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CE975D7B2708D59A00FA2050 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D812708DA3D00FA2050 /* ViewController */,
+				CE975D7E2708DA0300FA2050 /* View */,
+				CE975D7C2708D5CA00FA2050 /* DaengnyangWebView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		CE975D7E2708DA0300FA2050 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D7F2708DA1B00FA2050 /* WebContainerView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE975D812708DA3D00FA2050 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE975D822708DA5100FA2050 /* WebContainerViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		FFAE3E6D2708C2EE00B2CC77 /* CustomButton */ = {
@@ -404,6 +443,7 @@
 				FFAE3E682708AA9100B2CC77 /* MainCoverCardCollectionViewCell.xib in Resources */,
 				CE975D422707FACD00FA2050 /* Main.storyboard in Resources */,
 				FFAE3E732708C73A00B2CC77 /* Image.xcassets in Resources */,
+				CE975D802708DA1B00FA2050 /* WebContainerView.storyboard in Resources */,
 				CE975D7027089B5100FA2050 /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +523,8 @@
 				CE975D7A2708B04200FA2050 /* CreateBadgeSelectionTableViewCell.swift in Sources */,
 				FFAE3E6A2708AB1700B2CC77 /* UICollectionViewExtension.swift in Sources */,
 				CE975D532708885E00FA2050 /* BasicService.swift in Sources */,
+				CE975D832708DA5100FA2050 /* WebContainerViewController.swift in Sources */,
+				CE975D7D2708D5CA00FA2050 /* DaengnyangWebView.swift in Sources */,
 				CE975D6D27088C9400FA2050 /* CoverEditViewController.swift in Sources */,
 				CE975D6B27088C9400FA2050 /* CoverEditViewModel.swift in Sources */,
 				FFAE3E7A2708D1A000B2CC77 /* UIColor+.swift in Sources */,
