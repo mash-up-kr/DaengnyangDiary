@@ -27,18 +27,18 @@ class MainCoverCardCollectionViewCell: UICollectionViewCell {
         cardView.backgroundColor = #colorLiteral(red: 0.9019607843, green: 0.8784313725, blue: 0.8392156863, alpha: 1)
     }
     
-    func setData(month: Int) {
-        cardView.setData(month: month)
+    func setData(month: Int, data: CoverData) {
+        cardView.setData(month: month, data: data)
     }
 }
 
 struct CoverData {
     var imageUrl: String
     var attachedStickerList: [AttachedStickerList]
-    
-    struct AttachedStickerList {
-        var imageUrl: String
-        var stickerX: CGFloat
-        var stickerY: CGFloat
-    }
+}
+
+struct AttachedStickerList {
+    var imageUrl: String
+    var stickerX: CGFloat
+    var stickerY: CGFloat
 }
