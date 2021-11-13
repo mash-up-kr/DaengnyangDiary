@@ -83,26 +83,61 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEw-y8-ABV" customClass="SelectOrderButton" customModule="DaengnyangDiary" customModuleProvider="target">
-                                                        <rect key="frame" x="364" y="53.5" width="30" height="32.5"/>
+                                                        <rect key="frame" x="364" y="55" width="30" height="30"/>
                                                     </button>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SJq-Sw-mkE">
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SJq-Sw-mkE">
                                                         <rect key="frame" x="20" y="103" width="374" height="77"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="77" id="oui-ar-ZqC"/>
                                                         </constraints>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="97" id="kr5-tu-8Pt">
+                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="97"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kr5-tu-8Pt" id="aMD-Ek-gV6">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="97"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
                                                     </tableView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ysT-rO-he0">
+                                                        <rect key="frame" x="274" y="85" width="120" height="88"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92c-Zi-gJO" customClass="OderMenuButton" customModule="DaengnyangDiary" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="FKc-mE-Kaj"/>
+                                                                    <constraint firstAttribute="width" constant="120" id="P6F-Pa-eMM"/>
+                                                                </constraints>
+                                                                <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="완료순"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNt-kH-9ZT" customClass="OderMenuButton" customModule="DaengnyangDiary" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="44" width="120" height="44"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="iMO-nU-tWJ"/>
+                                                                    <constraint firstAttribute="width" constant="120" id="jzX-jC-hre"/>
+                                                                </constraints>
+                                                                <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="작성순"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="SJq-Sw-mkE" firstAttribute="top" secondItem="DEw-y8-ABV" secondAttribute="bottom" constant="17" id="5w1-GQ-9IT"/>
-                                                    <constraint firstAttribute="height" constant="300" id="8hp-5e-07n"/>
+                                                    <constraint firstItem="SJq-Sw-mkE" firstAttribute="top" secondItem="KIG-cR-nhc" secondAttribute="bottom" constant="23.5" id="5w1-GQ-9IT"/>
                                                     <constraint firstItem="KIG-cR-nhc" firstAttribute="top" secondItem="haW-Ni-BqW" secondAttribute="top" constant="60" id="9Ek-mf-I3X"/>
                                                     <constraint firstItem="DEw-y8-ABV" firstAttribute="centerY" secondItem="KIG-cR-nhc" secondAttribute="centerY" id="DGN-pr-Bqi"/>
                                                     <constraint firstAttribute="trailing" secondItem="SJq-Sw-mkE" secondAttribute="trailing" constant="20" id="Ns1-YR-Eak"/>
+                                                    <constraint firstItem="DEw-y8-ABV" firstAttribute="trailing" secondItem="ysT-rO-he0" secondAttribute="trailing" id="UWv-kM-8qa"/>
                                                     <constraint firstAttribute="trailing" secondItem="DEw-y8-ABV" secondAttribute="trailing" constant="20" id="YzB-o7-TF1"/>
                                                     <constraint firstItem="KIG-cR-nhc" firstAttribute="leading" secondItem="haW-Ni-BqW" secondAttribute="leading" constant="22" id="duC-1Q-qKS"/>
                                                     <constraint firstItem="SJq-Sw-mkE" firstAttribute="leading" secondItem="haW-Ni-BqW" secondAttribute="leading" constant="20" id="e03-qA-1GB"/>
+                                                    <constraint firstItem="ysT-rO-he0" firstAttribute="top" secondItem="DEw-y8-ABV" secondAttribute="bottom" id="wWd-9U-jhu"/>
                                                     <constraint firstAttribute="bottom" secondItem="SJq-Sw-mkE" secondAttribute="bottom" constant="120" id="x4u-s9-Sde"/>
                                                 </constraints>
                                             </view>
@@ -144,8 +179,10 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="x9v-eh-b5Y" id="cOz-V1-jaJ"/>
+                        <outlet property="orderButton" destination="DEw-y8-ABV" id="AaP-4M-9kj"/>
+                        <outlet property="orderListStackView" destination="ysT-rO-he0" id="cmD-5c-Dhm"/>
                         <outlet property="scheduleListTableView" destination="SJq-Sw-mkE" id="LVe-dS-Jrd"/>
-                        <outlet property="scheduleListTableViewHeight" destination="oui-ar-ZqC" id="La6-IL-EfF"/>
+                        <outlet property="scheduleListTableViewHeight" destination="oui-ar-ZqC" id="KqK-tS-Ptk"/>
                         <outlet property="scrollView" destination="tHY-HW-MXs" id="UER-dS-Lff"/>
                         <outlet property="selectYearButton" destination="nUV-Br-1Yb" id="QIZ-xj-Tn6"/>
                     </connections>

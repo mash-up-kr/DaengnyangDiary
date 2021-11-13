@@ -16,7 +16,7 @@ final class MainViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        scheduleListTableView.registerNibCell(MainHeaderTableViewCell.self)
+        scheduleListTableView.registerNibCell(ScheduleListTableViewCell.self)
     }
     
     override func viewDidLayoutSubviews() {
@@ -24,10 +24,6 @@ final class MainViewController: UIViewController {
         configureCollectionView()
         configureScheduleListView()
         
-        collectionView.scrollToItem(at: IndexPath(row: Int(Date().month) - 1, section: 0), at: .left, animated: false)
-        scheduleListTableViewHeight.constant = scheduleListTableView.contentSize.height
-        scheduleListTableView.layoutIfNeeded()
-        print("scheduleListTableViewHeight: \(scheduleListTableViewHeight), scrollView: \(scrollView.contentSize.height)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,11 +33,17 @@ final class MainViewController: UIViewController {
     
     // MARK: - Bind
     func bind() {
-        bindTableView()
+        bindView()
         bindViewModel()
     }
     
-    func bindTableView() {
+    func bindView() {
+        orderButton.rx.tap
+            .bind { [weak self] in
+                self?.orderListStackView.isHidden = !(self?.orderListStackView.isHidden ?? false)
+                self?.orderButton.isClicked = !(self?.orderButton.isClicked ?? false)
+            }
+            .disposed(by: disposeBag)
     }
     
     func bindViewModel() {
@@ -68,6 +70,8 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scheduleListTableView: UITableView!
     @IBOutlet weak var scheduleListTableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var orderButton: SelectOrderButton!
+    @IBOutlet weak var orderListStackView: UIStackView!
     
     private let cellWidth: CGFloat = 290
     private let cellHeight: CGFloat = 395
@@ -99,12 +103,16 @@ extension MainViewController {
         collectionView.decelerationRate = .fast
         
         collectionView.registerNibCell(MainCoverCardCollectionViewCell.self)
+        
+        collectionView.scrollToItem(at: IndexPath(row: Int(Date().month) - 1, section: 0), at: .left, animated: false)
     }
     
     private func configureScheduleListView() {
+        scheduleListTableViewHeight.constant = scheduleListTableView.contentSize.height
         scheduleListTableView.setCornerRadius(radius: 12)
         scheduleListTableView.delegate = self
         scheduleListTableView.dataSource = self
+        orderListStackView.isHidden = true
     }
 }
 
@@ -114,7 +122,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusable(MainHeaderTableViewCell.self, for: indexPath)
+        let cell = tableView.dequeueReusable(ScheduleListTableViewCell.self, for: indexPath)
         return cell
     }
 }

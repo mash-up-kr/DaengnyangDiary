@@ -59,6 +59,11 @@ class SelectYearButton: UIButton {
 class SelectOrderButton: UIButton {
     private var orderLabel: UILabel!
     private var vectorImageView: UIImageView!
+    var isClicked: Bool = false {
+        didSet {
+            vectorImageView.image = isClicked ? Asset.arrowUp.image : Asset.arrowDown.image
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -98,9 +103,5 @@ class SelectOrderButton: UIButton {
     
     func setOrder(_ order: String) {
         orderLabel.text = order
-    }
-    
-    func isClicked(_ isClicked: Bool) {
-        vectorImageView.image = isClicked ? Asset.arrowUp.image : Asset.arrowDown.image
     }
 }

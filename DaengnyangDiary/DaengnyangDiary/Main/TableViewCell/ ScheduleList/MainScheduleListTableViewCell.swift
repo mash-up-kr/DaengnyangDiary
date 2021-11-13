@@ -32,10 +32,10 @@ class MainScheduleListTableViewCell: UITableViewCell {
     private func configureUI() {
         checkListView.setCornerRadius(radius: 12)
         
-        let checkBoxCell = ScheduleCheckListView(isCheck: true, title: "콩이 사상충약", date: "5월 21일")
-        let checkBoxCell2 = ScheduleCheckListView(isCheck: true, title: "콩이 사상충약", date: "5월 21일")
-        stackView.addArrangedSubview(checkBoxCell)
-        stackView.addArrangedSubview(DivisionView())
-        stackView.addArrangedSubview(checkBoxCell2)
+//        let checkBoxCell = ScheduleCheckListView(isCheck: true, title: "콩이 사상충약", date: "5월 21일")
+//        let checkBoxCell2 = ScheduleCheckListView(isCheck: true, title: "콩이 사상충약", date: "5월 21일")
+//        stackView.addArrangedSubview(checkBoxCell)
+//        stackView.addArrangedSubview(DivisionView())
+//        stackView.addArrangedSubview(checkBoxCell2)
     }
 }
