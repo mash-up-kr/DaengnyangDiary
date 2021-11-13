@@ -31,3 +31,14 @@ class MainCoverCardCollectionViewCell: UICollectionViewCell {
         cardView.setData(month: month)
     }
 }
+
+struct CoverData {
+    var imageUrl: String
+    var attachedStickerList: [AttachedStickerList]
+    
+    struct AttachedStickerList {
+        var imageUrl: String
+        var stickerX: CGFloat
+        var stickerY: CGFloat
+    }
+}
