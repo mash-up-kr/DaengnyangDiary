@@ -29,6 +29,7 @@
 		CE975D7D2708D5CA00FA2050 /* DaengnyangWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D7C2708D5CA00FA2050 /* DaengnyangWebView.swift */; };
 		CE975D802708DA1B00FA2050 /* WebContainerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE975D7F2708DA1B00FA2050 /* WebContainerView.storyboard */; };
 		CE975D832708DA5100FA2050 /* WebContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D822708DA5100FA2050 /* WebContainerViewController.swift */; };
+		CEFA14D827400FB7000F5BE5 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFA14D727400FB7000F5BE5 /* Root.storyboard */; };
 		ED4C56B3C976FCE0AF67F942 /* Pods_DaengnyangDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1EF9502F28CC9B63FCEC4F /* Pods_DaengnyangDiary.framework */; };
 		FFAE3E4D270899F200B2CC77 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E4C270899F200B2CC77 /* UITableViewExtension.swift */; };
 		FFAE3E5727089CD000B2CC77 /* MainHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E5527089CD000B2CC77 /* MainHeaderTableViewCell.swift */; };
@@ -83,6 +84,7 @@
 		CE975D6A27088C9400FA2050 /* CoverEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverEditViewController.swift; sourceTree = "<group>"; };
 		CE975D6F27089B5100FA2050 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		CE975D7227089E9A00FA2050 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		CEFA14D727400FB7000F5BE5 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		FFAE3E4C270899F200B2CC77 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FFAE3E5527089CD000B2CC77 /* MainHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FFAE3E5627089CD000B2CC77 /* MainHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				CE975D5627088A3400FA2050 /* CoverEdit */,
 				CE975D3A2707FACD00FA2050 /* AppDelegate.swift */,
 				CE975D452707FACE00FA2050 /* LaunchScreen.storyboard */,
+				CEFA14D727400FB7000F5BE5 /* Root.storyboard */,
 			);
 			path = DaengnyangDiary;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				FFAE3E6027089D6E00B2CC77 /* MainCovercardTableViewCell.xib in Resources */,
 				CE975D6427088C7300FA2050 /* Create.storyboard in Resources */,
 				FFB85808272F7DD9001B12A1 /* MainScheduleListTableViewCell.xib in Resources */,
+				CEFA14D827400FB7000F5BE5 /* Root.storyboard in Resources */,
 				FFAE3E5827089CD000B2CC77 /* MainHeaderTableViewCell.xib in Resources */,
 				CE975D6C27088C9400FA2050 /* CoverEdit.storyboard in Resources */,
 				CE975D472707FACE00FA2050 /* LaunchScreen.storyboard in Resources */,
