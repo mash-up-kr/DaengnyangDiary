@@ -47,24 +47,17 @@ final class MainViewController: UIViewController {
     }
     
     func bindViewModel() {
-        viewModel.isPickerViewOpened
-            .subscribe(onNext: { [weak self] isOpened in
-                if isOpened {
-                    self?.didTapSelectYearButton()
-                }
-            })
-            .disposed(by: disposeBag)
     }
     
-    // MARK: - Func
-    func didTapSelectYearButton() {
-        let vc = MainDatePickerViewController.instantiate()
+    // MARK: - action
+    @IBAction func selectYearButton(_ sender: SelectYearButton) {
+        let vc = MonthPickerView.instantiate()
         vc.modalPresentationStyle = .overCurrentContext
-        vc.delegate = self
-        vc.dataSource.selectedYear = viewModel.selectedYear
-        present(vc, animated: true, completion: nil)
+        present(vc, animated: false, completion: nil)
     }
     
+    
+    // MARK: - IBOutlet
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var selectYearButton: SelectYearButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -135,6 +128,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusable(MainCoverCardCollectionViewCell.self, for: indexPath)
+        cell.setData(month: indexPath.row + 1)
         return cell
     }
 }

@@ -19,6 +19,8 @@
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let arrowDown = ImageAsset(name: "arrowDown")
+  internal static let arrowLeft = ImageAsset(name: "arrowLeft")
+  internal static let arrowRight = ImageAsset(name: "arrowRight")
   internal static let arrowUp = ImageAsset(name: "arrowUp")
   internal static let closeX = ImageAsset(name: "closeX")
   internal static let icCheckOff = ImageAsset(name: "icCheckOff")

@@ -47,6 +47,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUV-Br-1Yb" customClass="SelectYearButton" customModule="DaengnyangDiary" customModuleProvider="target">
                                                         <rect key="frame" x="201" y="27" width="30" height="32"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <connections>
+                                                            <action selector="selectYearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yV8-Wh-pcb"/>
+                                                        </connections>
                                                     </button>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x9v-eh-b5Y">
                                                         <rect key="frame" x="0.0" y="82" width="414" height="395"/>
