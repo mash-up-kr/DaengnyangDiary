@@ -18,7 +18,24 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
-  internal static let down = ImageAsset(name: "down")
+  internal static let arrowDown = ImageAsset(name: "arrowDown")
+  internal static let arrowUp = ImageAsset(name: "arrowUp")
+  internal static let closeX = ImageAsset(name: "closeX")
+  internal static let icCheckOff = ImageAsset(name: "icCheckOff")
+  internal static let icCheckOn = ImageAsset(name: "icCheckOn")
+  internal static let logo = ImageAsset(name: "logo")
+  internal static let month01 = ImageAsset(name: "month01")
+  internal static let month02 = ImageAsset(name: "month02")
+  internal static let month03 = ImageAsset(name: "month03")
+  internal static let month04 = ImageAsset(name: "month04")
+  internal static let month05 = ImageAsset(name: "month05")
+  internal static let month06 = ImageAsset(name: "month06")
+  internal static let month07 = ImageAsset(name: "month07")
+  internal static let month08 = ImageAsset(name: "month08")
+  internal static let month09 = ImageAsset(name: "month09")
+  internal static let month10 = ImageAsset(name: "month10")
+  internal static let month11 = ImageAsset(name: "month11")
+  internal static let month12 = ImageAsset(name: "month12")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

@@ -10,15 +10,45 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainHeaderTableViewCell" id="KGk-i7-Jjw" customClass="MainHeaderTableViewCell" customModule="DaengnyangDiary" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainHeaderTableViewCell" rowHeight="52" id="KGk-i7-Jjw" customClass="MainHeaderTableViewCell" customModule="DaengnyangDiary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="An4-pD-PmY">
+                        <rect key="frame" x="24" y="14" width="59" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="jCO-kr-bi8"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-JT-o1C" customClass="MyPageButton" customModule="DaengnyangDiary" customModuleProvider="target">
+                        <rect key="frame" x="264" y="8" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="Ziy-oP-wYg"/>
+                            <constraint firstAttribute="width" constant="36" id="gfY-UI-Qph"/>
+                        </constraints>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nwp-JT-o1C" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BvX-aw-64h"/>
+                    <constraint firstItem="An4-pD-PmY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Idi-dY-te7"/>
+                    <constraint firstItem="An4-pD-PmY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="UU3-fW-4WI"/>
+                    <constraint firstAttribute="trailing" secondItem="nwp-JT-o1C" secondAttribute="trailing" constant="20" id="eo1-og-bCi"/>
+                    <constraint firstAttribute="bottom" secondItem="An4-pD-PmY" secondAttribute="bottom" constant="14" id="fn9-51-W6C"/>
+                    <constraint firstItem="An4-pD-PmY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="oRG-7z-jiN"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="112" y="91"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="myPageButton" destination="nwp-JT-o1C" id="Cky-oE-Qp1"/>
+            </connections>
+            <point key="canvasLocation" x="111.59420289855073" y="93.080357142857139"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="logo" width="59" height="24"/>
+    </resources>
 </document>
