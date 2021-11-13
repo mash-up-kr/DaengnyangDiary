@@ -11,17 +11,17 @@
         <scene sceneID="SxM-UX-ROG">
             <objects>
                 <viewControllerPlaceholder storyboardName="Main" id="TXf-DK-bWp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rR4-9x-8bN"/>
+                    <tabBarItem key="tabBarItem" title="" image="home_inactive" id="rR4-9x-8bN"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ee5-y1-QwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="664" y="7"/>
         </scene>
-        <!--Main-->
+        <!--Calendar-->
         <scene sceneID="SJ7-V4-l41">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="dPZ-y7-WZ8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="VuR-4G-ZHV"/>
+                <viewControllerPlaceholder storyboardName="Calendar" id="dPZ-y7-WZ8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="book_inactive" id="VuR-4G-ZHV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kL-gt-iS2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,7 +30,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="1Gv-88-NRo">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="liC-ZB-4a0" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="liC-ZB-4a0" customClass="TabBarController" customModule="DaengnyangDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4yz-7m-77U">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -49,35 +49,41 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
         </scene>
-        <!--Main-->
+        <!--Create-->
         <scene sceneID="zbX-bm-4Qo">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="7oi-f6-g5e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oSM-Un-5fL"/>
+                <viewControllerPlaceholder storyboardName="Create" id="7oi-f6-g5e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="oSM-Un-5fL"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dw-Qh-DLS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="738" y="113"/>
         </scene>
-        <!--Main-->
+        <!--WebContainerView-->
         <scene sceneID="SMb-U3-1Fd">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="hGu-UK-lKq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zSi-bq-WIt"/>
+                <viewControllerPlaceholder storyboardName="WebContainerView" id="hGu-UK-lKq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="calendar_inactive" id="zSi-bq-WIt"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZM-7q-Pmz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="738" y="60"/>
         </scene>
-        <!--Main-->
+        <!--MyPage-->
         <scene sceneID="C2w-54-35u">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="hpC-7T-eXl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Npd-I4-yVU"/>
+                <viewControllerPlaceholder storyboardName="MyPage" id="hpC-7T-eXl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="user_inactive" id="Npd-I4-yVU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ace-aa-oxi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="737" y="247"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book_inactive" width="24" height="24"/>
+        <image name="calendar_inactive" width="24" height="24"/>
+        <image name="home_inactive" width="24" height="24"/>
+        <image name="user_inactive" width="24" height="24"/>
+    </resources>
 </document>

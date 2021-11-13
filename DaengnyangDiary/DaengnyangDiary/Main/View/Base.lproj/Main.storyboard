@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -96,7 +96,7 @@
                                                         </constraints>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="97" id="kr5-tu-8Pt">
-                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="97"/>
+                                                                <rect key="frame" x="0.0" y="44.5" width="374" height="97"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kr5-tu-8Pt" id="aMD-Ek-gV6">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="97"/>
@@ -180,6 +180,7 @@
                             <constraint firstItem="tHY-HW-MXs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zMV-5Z-S9i"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="home_inactive" selectedImage="home" id="bet-1w-Oza"/>
                     <connections>
                         <outlet property="collectionView" destination="x9v-eh-b5Y" id="cOz-V1-jaJ"/>
                         <outlet property="orderButton" destination="DEw-y8-ABV" id="AaP-4M-9kj"/>
@@ -192,10 +193,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sOV-ny-wVb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9hO-o7-Ot9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BVn-Yg-JDi">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="uft-SI-aJE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVa-8h-DIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
     <resources>
+        <image name="home" width="24" height="24"/>
+        <image name="home_inactive" width="24" height="24"/>
         <image name="logo" width="59" height="24"/>
         <namedColor name="Light">
             <color red="0.96470588235294119" green="0.95686274509803926" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
