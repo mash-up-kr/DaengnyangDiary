@@ -13,6 +13,8 @@ final class MainViewController: UIViewController {
     private let viewModel = MainViewModel()
     private let disposeBag: DisposeBag = DisposeBag()
     
+    var month = Date().month
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +54,8 @@ final class MainViewController: UIViewController {
     // MARK: - action
     @IBAction func selectYearButton(_ sender: SelectYearButton) {
         let vc = MonthPickerView.instantiate()
+        vc.selectedMonth = month
+        vc.delegate = self
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: false, completion: nil)
     }
@@ -70,10 +74,10 @@ final class MainViewController: UIViewController {
     private let cellHeight: CGFloat = 395
 }
 
-extension MainViewController: MainDataPickerViewControllerDelegate {
-    func closePickerView() {
-        viewModel.isPickerViewOpened
-            .accept(false)
+extension MainViewController: MonthPickerViewControllerDelegate {
+    func choose(year: Int, month: Int) {
+        self.month = month
+        collectionView.scrollToItem(at: IndexPath(row: month - 1, section: 0), at: .left, animated: true)
     }
 }
 
@@ -97,7 +101,7 @@ extension MainViewController {
         
         collectionView.registerNibCell(MainCoverCardCollectionViewCell.self)
         
-        collectionView.scrollToItem(at: IndexPath(row: Int(Date().month) - 1, section: 0), at: .left, animated: false)
+        collectionView.scrollToItem(at: IndexPath(row: month - 1, section: 0), at: .left, animated: false)
     }
     
     private func configureScheduleListView() {
