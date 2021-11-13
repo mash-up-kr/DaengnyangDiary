@@ -46,9 +46,15 @@ class ScheduleListTableViewCell: UITableViewCell {
         }
     }
     
-    func setData(isCheck: Bool, title: String, date: String) {
-        self.checkBox.isCheck = isCheck
-        self.titleLabel.text = title
-        self.dateLabel.text = date
+    func setData(_ data: CheckListData) {
+        self.checkBox.isCheck = data.isCheck
+        self.titleLabel.text = data.title
+        self.dateLabel.text = data.date
     }
+}
+
+struct CheckListData {
+    var isCheck: Bool
+    var title: String
+    var date: String
 }

@@ -10,6 +10,14 @@ import RxSwift
 import RxCocoa
 
 final class MainViewController: UIViewController {
+    var checkListTestData = [
+        CheckListData(isCheck: true, title: "특식 먹는날", date: "11월 16일"),
+        CheckListData(isCheck: false, title: "콩이 심장사상충 검사", date: "11월 25일"),
+        CheckListData(isCheck: false, title: "애견 펜션 가는 날", date: "12월 03일"),
+        CheckListData(isCheck: false, title: "리치 병원가는 날", date: "12월 05일"),
+        CheckListData(isCheck: false, title: "특식 먹는날", date: "12월 5일")
+    ]
+    
     private let viewModel = MainViewModel()
     private let disposeBag: DisposeBag = DisposeBag()
     
@@ -115,11 +123,12 @@ extension MainViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        8
+        checkListTestData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusable(ScheduleListTableViewCell.self, for: indexPath)
+        cell.setData(checkListTestData[indexPath.row])
         return cell
     }
 }
