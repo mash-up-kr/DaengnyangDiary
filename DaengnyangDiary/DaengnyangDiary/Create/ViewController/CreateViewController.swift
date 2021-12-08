@@ -7,8 +7,23 @@
 
 import UIKit
 import Photos
+import RxSwift
+
+struct Login: Codable {
+    let token: String
+}
 
 final class CreateViewController: UIViewController {
+
+    let disposebag = DisposeBag()
+
+    func test() {
+        NetworkProvider.request(apiType: BasicService.basic).subscribe { (data: Login) in
+            print("@@@@@@ data: \(data)")
+        } onError: { error in
+            print("@@@@@@ error: \(error)")
+        }.disposed(by: self.disposebag)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +31,7 @@ final class CreateViewController: UIViewController {
         self.setupAddImageButton()
         self.setupTextView()
         self.setupImagePicker()
+        self.test()
     }
 
     @IBAction private func didTapAddImageButton(_ sender: UIButton) {

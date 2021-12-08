@@ -70,6 +70,9 @@ extension DaengnyangWebView {
 
     private enum MessageName: String, CaseIterable {
         case close
+        case reload
+        case delete
+        case addBookmark
     }
 
 }
@@ -77,6 +80,7 @@ extension DaengnyangWebView {
 extension DaengnyangWebView: WKScriptMessageHandler {
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print("@@@@@ didCall Message: \(message.name)")
     }
 
 }
@@ -87,6 +91,7 @@ extension DaengnyangWebView: WKNavigationDelegate {
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.evaluateJavaScript(Self.webViewJsSource, completionHandler: nil)
     }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -96,4 +101,17 @@ extension DaengnyangWebView: WKNavigationDelegate {
 }
 
 extension DaengnyangWebView: WKUIDelegate {
+}
+
+extension DaengnyangWebView {
+
+    static var webViewJsSource: String {
+        """
+        (function(){
+            window.token = {토큰};                   // 토큰 셋팅 후
+            var event = new Event('dataLodeded');
+            document.dispatchEvent(zepetoEvent);    // reload
+        }
+        """
+    }
 }
