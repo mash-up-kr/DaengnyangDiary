@@ -64,7 +64,7 @@ final class DaengnyangWebView: WKWebView {
         self.configuration.userContentController = WKUserContentController()
     }
 
-    private func updateToken() {
+    func updateToken() {
         let jsSource = "window.Mobile.updateToken('\(123456)')" // 토큰 받은 후 처리 값 셋팅
         self.evaluateJavaScript(jsSource, completionHandler: nil)
     }
