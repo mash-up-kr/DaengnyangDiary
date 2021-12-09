@@ -15,6 +15,7 @@ final class DaengnyangWebView: WKWebView {
         self.setupDelegates()
         self.setupProperties()
         self.setupConfiguration()
+        self.updateToken()
     }
 
     required init?(coder: NSCoder) {
@@ -22,6 +23,7 @@ final class DaengnyangWebView: WKWebView {
         self.setupDelegates()
         self.setupProperties()
         self.setupConfiguration()
+        self.updateToken()
     }
 
     override func willMove(toSuperview newSuperview: UIView?) {
@@ -62,6 +64,11 @@ final class DaengnyangWebView: WKWebView {
         self.configuration.userContentController = WKUserContentController()
     }
 
+    private func updateToken() {
+        let jsSource = "updateToken('\(123456)')" // 토큰 받은 후 처리 값 셋팅
+        self.evaluateJavaScript(jsSource, completionHandler: nil)
+    }
+
     private static let javaScriptMessageName = ""
 
 }
@@ -91,7 +98,7 @@ extension DaengnyangWebView: WKNavigationDelegate {
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        self.evaluateJavaScript(Self.webViewJsSource, completionHandler: nil)
+        //self.evaluateJavaScript(Self.webViewJsSource, completionHandler: nil)
     }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
