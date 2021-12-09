@@ -205,6 +205,9 @@
                                                             <constraint firstAttribute="width" constant="24" id="n5j-jj-ynB"/>
                                                         </constraints>
                                                         <state key="normal" image="arrowLeft"/>
+                                                        <connections>
+                                                            <action selector="preyearButtonClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Pxm-MQ-xSo"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfc-xj-a0S">
                                                         <rect key="frame" x="124.5" y="1.5" width="24" height="24"/>
@@ -215,6 +218,9 @@
                                                             <constraint firstAttribute="height" constant="24" id="ysd-W5-6EA"/>
                                                         </constraints>
                                                         <state key="normal" image="arrowRight"/>
+                                                        <connections>
+                                                            <action selector="nextyearButtonClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aU3-D9-XZQ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -271,7 +277,10 @@
                         <outlet property="month10" destination="byh-l7-pK5" id="K31-XI-ggq"/>
                         <outlet property="month11" destination="7Iw-qu-ej7" id="hAE-Sx-ZZS"/>
                         <outlet property="month12" destination="Oad-BV-ui4" id="ghw-vb-drO"/>
+                        <outlet property="nextYearButton" destination="xfc-xj-a0S" id="UHv-ut-LPm"/>
                         <outlet property="pickerView" destination="7CN-xN-5cF" id="seL-2h-84K"/>
+                        <outlet property="preYearButton" destination="myW-A5-pXG" id="afs-X4-jng"/>
+                        <outlet property="yearLabel" destination="3Vu-hd-uJ0" id="d7k-8O-HMQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

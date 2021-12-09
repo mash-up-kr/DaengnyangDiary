@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RxSwift
 
 protocol MonthPickerViewControllerDelegate: AnyObject {
     func choose(year: Int, month: Int)
@@ -14,6 +13,9 @@ protocol MonthPickerViewControllerDelegate: AnyObject {
 final class MonthPickerView: UIViewController {
     weak var delegate: MonthPickerViewControllerDelegate?
     
+    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var preYearButton: UIButton!
+    @IBOutlet weak var nextYearButton: UIButton!
     @IBOutlet weak var pickerView: UIView!
     @IBOutlet weak var month01: PickerViewMonthButton!
     @IBOutlet weak var month02: PickerViewMonthButton!
@@ -29,15 +31,14 @@ final class MonthPickerView: UIViewController {
     @IBOutlet weak var month12: PickerViewMonthButton!
     lazy var backgroundTapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapBackground(_:)))
     var selectedMonth: Int = 1
-    var year: Int = 2021
-    
-    var disposeBag = DisposeBag()
+    var selectedYear: Int = 2021
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pickerView.setCornerRadius(radius: 12)
         
+        yearLabel.text = "\(selectedYear)"
         let months: [PickerViewMonthButton] = [month01, month02, month03, month04, month05, month06, month07, month08, month09, month10, month11, month12]
         months[selectedMonth - 1].isClicked = true
         view.addGestureRecognizer(backgroundTapGesture)
@@ -53,56 +54,67 @@ final class MonthPickerView: UIViewController {
     
     #warning("collectionView로 만들기")
     @IBAction func clickMonth01(_ sender: Any) {
-        delegate?.choose(year: year, month: 1)
+        delegate?.choose(year: selectedYear, month: 1)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth02(_ sender: Any) {
-        delegate?.choose(year: year, month: 2)
+        delegate?.choose(year: selectedYear, month: 2)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth03(_ sender: Any) {
-        delegate?.choose(year: year, month: 3)
+        delegate?.choose(year: selectedYear, month: 3)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth04(_ sender: Any) {
-        delegate?.choose(year: year, month: 4)
+        delegate?.choose(year: selectedYear, month: 4)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth05(_ sender: Any) {
-        delegate?.choose(year: year, month: 5)
+        delegate?.choose(year: selectedYear, month: 5)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth06(_ sender: Any) {
-        delegate?.choose(year: year, month: 6)
+        delegate?.choose(year: selectedYear, month: 6)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth07(_ sender: Any) {
-        delegate?.choose(year: year, month: 7)
+        delegate?.choose(year: selectedYear, month: 7)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth08(_ sender: Any) {
-        delegate?.choose(year: year, month: 8)
+        delegate?.choose(year: selectedYear, month: 8)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth09(_ sender: Any) {
-        delegate?.choose(year: year, month: 9)
+        delegate?.choose(year: selectedYear, month: 9)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth10(_ sender: Any) {
-        delegate?.choose(year: year, month: 10)
+        delegate?.choose(year: selectedYear, month: 10)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth11(_ sender: Any) {
-        delegate?.choose(year: year, month: 11)
+        delegate?.choose(year: selectedYear, month: 11)
         dismiss(animated: false, completion: nil)
     }
     @IBAction func clickMonth12(_ sender: Any) {
-        delegate?.choose(year: year, month: 12)
+        delegate?.choose(year: selectedYear, month: 12)
         dismiss(animated: false, completion: nil)
     }
     
     @objc private func didTapBackground(_ sender: UITapGestureRecognizer) {
         dismiss(animated: false, completion: nil)
+    }
+    
+    @IBAction func preyearButtonClick(_ sender: Any) {
+        selectedYear -= 1
+        yearLabel.text = "\(selectedYear)년"
+        
+    }
+    
+    @IBAction func nextyearButtonClick(_ sender: Any) {
+        selectedYear += 1
+        yearLabel.text = "\(selectedYear)년"
     }
 }
 

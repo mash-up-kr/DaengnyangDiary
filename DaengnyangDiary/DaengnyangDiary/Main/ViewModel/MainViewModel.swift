@@ -5,37 +5,38 @@
 //  Created by Yoojin Park on 2021/10/02.
 //
 
-import Foundation
+import UIKit
 import RxSwift
 import RxCocoa
 
-class MainViewModel {
-    let disposeBag = DisposeBag()
+class MainViewModel: BaseViewModelProtocol {
+    let bag = DisposeBag()
     
-    var isPickerViewOpened = PublishRelay<Bool>()
-    var selectedYear = PublishRelay<String>()
+    let inputRelay = PublishRelay<Input>()
+    let outputRelay = PublishRelay<Output>()
+    
+    var selectedYear: Int = Date().year
+    var selectedMonth: Int = Date().month // 현재 선택되어 있는 month
     
     // MARK: - Properties
+    enum Input {
+        case requestCoverData
+        case tapSelectYearButton
+    }
     
-//    struct Input {
-//        var closePickerView: Observable<Void>
-//    }
-//    struct Output {
-//        var isPickerViewOpened = PublishRelay<Bool>()
-//        var selectedYear = PublishRelay<String>()
-//    }
-//    
-//    // MARK: - Initializers
-//    
-//    deinit {
-//        print("\(String(describing: self)) deinit")
-//    }
-//    
-//    // MARK: - Methods
-//    
-//    func transform(input: Input) -> Output {
-//        
-//    }
+    enum Output {
+        case settingCover
+        case showSelectMonthView(_ year: Int, _ month: Int)
+    }
+    
+    func outputBinding(_ input: Input) -> Output {
+        switch input {
+        case .requestCoverData:
+            return .settingCover
+        case .tapSelectYearButton:
+            return .showSelectMonthView(selectedYear, selectedMonth)
+        }
+    }
 }
 
 struct ScheduleList {

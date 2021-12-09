@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class MainViewController: UIViewController {
+final class MainViewController: BaseViewController<MainViewModel> {
     var checkListTestData = [
         CheckListData(isCheck: true, title: "특식 먹는날", date: "11월 16일"),
         CheckListData(isCheck: false, title: "콩이 심장사상충 검사", date: "11월 25일"),
@@ -18,14 +18,12 @@ final class MainViewController: UIViewController {
         CheckListData(isCheck: false, title: "특식 먹는날", date: "12월 5일")
     ]
     
-    private let viewModel = MainViewModel()
-    private let disposeBag: DisposeBag = DisposeBag()
-    
-    var month = Date().month
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
+        setViewModel(MainViewModel())
         super.viewDidLoad()
+        viewModel.inputRelay.accept(.requestCoverData)
         scheduleListTableView.registerNibCell(ScheduleListTableViewCell.self)
     }
     
@@ -38,36 +36,44 @@ final class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        bind()
     }
     
     // MARK: - Bind
-    func bind() {
-        bindView()
-        bindViewModel()
-    }
-    
-    func bindView() {
+    override func viewBinding() {
+        super.viewBinding()
+        selectYearButton.rx.tap
+            .map { MainViewModel.Input.tapSelectYearButton }
+            .bind(to: viewModel.inputRelay)
+            .disposed(by: bag)
+        
         orderButton.rx.tap
             .bind { [weak self] in
                 self?.orderListStackView.isHidden = !(self?.orderListStackView.isHidden ?? false)
                 self?.orderButton.isClicked = !(self?.orderButton.isClicked ?? false)
             }
-            .disposed(by: disposeBag)
+            .disposed(by: bag)
     }
     
-    func bindViewModel() {
+    override func viewModelBinding() {
+        super.viewModelBinding()
+        viewModel.outputRelay
+            .bind { [weak self] in self?.result($0) }
+            .disposed(by: bag)
     }
     
-    // MARK: - action
-    @IBAction func selectYearButton(_ sender: SelectYearButton) {
-        let vc = MonthPickerView.instantiate()
-        vc.selectedMonth = month
-        vc.delegate = self
-        vc.modalPresentationStyle = .overCurrentContext
-        present(vc, animated: false, completion: nil)
+    func result(_ output: MainViewModel.Output) {
+        switch output {
+        case .showSelectMonthView(let selectedYear, let selectedMonth):
+            let vc = MonthPickerView.instantiate()
+            vc.selectedYear = selectedYear
+            vc.selectedMonth = selectedMonth
+            vc.delegate = self
+            vc.modalPresentationStyle = .overCurrentContext
+            present(vc, animated: false, completion: nil)
+        case .settingCover:
+            collectionView.reloadData()
+        }
     }
-    
     
     // MARK: - IBOutlet
     @IBOutlet weak var scrollView: UIScrollView!
@@ -84,7 +90,12 @@ final class MainViewController: UIViewController {
 
 extension MainViewController: MonthPickerViewControllerDelegate {
     func choose(year: Int, month: Int) {
-        self.month = month
+        if viewModel.selectedYear != year {
+            viewModel.inputRelay.accept(.requestCoverData)
+        }
+        selectYearButton.setYear("\(year)")
+        viewModel.selectedYear = year
+        viewModel.selectedMonth = month
         collectionView.scrollToItem(at: IndexPath(row: month - 1, section: 0), at: .left, animated: true)
     }
 }
@@ -109,7 +120,7 @@ extension MainViewController {
         
         collectionView.registerNibCell(MainCoverCardCollectionViewCell.self)
         
-        collectionView.scrollToItem(at: IndexPath(row: month - 1, section: 0), at: .left, animated: false)
+        collectionView.scrollToItem(at: IndexPath(row: viewModel.selectedMonth - 1, section: 0), at: .left, animated: false)
     }
     
     private func configureScheduleListView() {

@@ -39,6 +39,8 @@
 		FF3AA0E2274025670081A32F /* CoverCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AA0E1274025670081A32F /* CoverCardView.swift */; };
 		FF4E82CD274029630065C392 /* MonthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4E82CC274029630065C392 /* MonthPickerView.swift */; };
 		FF4E82D0274029870065C392 /* MonthPickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4E82CF274029870065C392 /* MonthPickerView.storyboard */; };
+		FF55A5502761CFEA000567D7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55A54F2761CFE9000567D7 /* BaseViewController.swift */; };
+		FF55A5522761D013000567D7 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55A5512761D013000567D7 /* BaseViewModel.swift */; };
 		FFAE3E4D270899F200B2CC77 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E4C270899F200B2CC77 /* UITableViewExtension.swift */; };
 		FFAE3E632708A14300B2CC77 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		FFAE3E672708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E652708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift */; };
@@ -98,6 +100,8 @@
 		FF3AA0E1274025670081A32F /* CoverCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverCardView.swift; sourceTree = "<group>"; };
 		FF4E82CC274029630065C392 /* MonthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerView.swift; sourceTree = "<group>"; };
 		FF4E82CF274029870065C392 /* MonthPickerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MonthPickerView.storyboard; sourceTree = "<group>"; };
+		FF55A54F2761CFE9000567D7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FF55A5512761D013000567D7 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		FFAE3E4C270899F200B2CC77 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FFAE3E652708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoverCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFAE3E662708AA9100B2CC77 /* MainCoverCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCoverCardCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		CE975D392707FACD00FA2050 /* DaengnyangDiary */ = {
 			isa = PBXGroup;
 			children = (
+				FF55A54D2761CFC2000567D7 /* Util */,
 				CE975D5127084E3000FA2050 /* Supporting Files */,
 				CE975D7B2708D59A00FA2050 /* WebView */,
 				FFAE3E612708A14300B2CC77 /* Extension */,
@@ -421,6 +426,23 @@
 			path = monthPickerView;
 			sourceTree = "<group>";
 		};
+		FF55A54D2761CFC2000567D7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FF55A54E2761CFD3000567D7 /* Base */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		FF55A54E2761CFD3000567D7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FF55A54F2761CFE9000567D7 /* BaseViewController.swift */,
+				FF55A5512761D013000567D7 /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		FFAE3E612708A14300B2CC77 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -649,11 +671,13 @@
 				FFB85801272F753B001B12A1 /* MyPageButton.swift in Sources */,
 				FF3AA0E2274025670081A32F /* CoverCardView.swift in Sources */,
 				CEFA14EA27404D00000F5BE5 /* TabBarController.swift in Sources */,
+				FF55A5502761CFEA000567D7 /* BaseViewController.swift in Sources */,
 				CEFA14E027404AF6000F5BE5 /* CalendarViewController.swift in Sources */,
 				FFAE3E772708CC5300B2CC77 /* DateExtension.swift in Sources */,
 				CE975D3B2707FACD00FA2050 /* AppDelegate.swift in Sources */,
 				FFB8580F272FA55F001B12A1 /* CheckBox.swift in Sources */,
 				CE975D752708A36500FA2050 /* CreateBadgeSelectionViewController.swift in Sources */,
+				FF55A5522761D013000567D7 /* BaseViewModel.swift in Sources */,
 				CE975D5027084D7300FA2050 /* NetworkProvider.swift in Sources */,
 				FFAE3E6F2708C31900B2CC77 /* ShowPickerViewButton.swift in Sources */,
 				FFB857FF272A6E73001B12A1 /* imageAsset.swift in Sources */,
@@ -806,7 +830,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RQ7B74WTDR;
+				DEVELOPMENT_TEAM = AZX9TD66UC;
 				INFOPLIST_FILE = "DaengnyangDiary/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -827,7 +851,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RQ7B74WTDR;
+				DEVELOPMENT_TEAM = AZX9TD66UC;
 				INFOPLIST_FILE = "DaengnyangDiary/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
