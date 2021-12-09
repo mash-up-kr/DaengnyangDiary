@@ -66,11 +66,18 @@ final class DaengnyangWebView: WKWebView {
 
     func updateToken() {
         let jsSource =
-                """
-                (function(){
-                    window.Mobile.updateToken('\(123456)');
-                })();
-                """ // 토큰 받은 후 처리 값 셋팅
+//                """
+//                (function(){
+//                    window.Mobile.updateToken('\(123456)');
+//                })();
+//                """ // 토큰 받은 후 처리 값 셋팅
+        """
+        Mobile = {
+            getToken() {
+                return "\(1234567890)";
+            }
+        }
+        """
         self.evaluateJavaScript(jsSource, completionHandler: nil)
     }
 
