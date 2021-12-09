@@ -108,7 +108,7 @@ extension DaengnyangWebView {
     static var webViewJsSource: String {
         """
         (function(){
-            window.token = {토큰};                   // 토큰 셋팅 후
+            window.token = "{토큰}";                   // 토큰 셋팅 후
             var event = new Event('dataLodeded');
             document.dispatchEvent(zepetoEvent);    // reload
         }
