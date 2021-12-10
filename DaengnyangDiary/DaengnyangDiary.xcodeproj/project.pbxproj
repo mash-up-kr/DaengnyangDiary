@@ -55,6 +55,7 @@
 		FF4E82D0274029870065C392 /* MonthPickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4E82CF274029870065C392 /* MonthPickerView.storyboard */; };
 		FF55A5502761CFEA000567D7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55A54F2761CFE9000567D7 /* BaseViewController.swift */; };
 		FF55A5522761D013000567D7 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55A5512761D013000567D7 /* BaseViewModel.swift */; };
+		FFAC54702763841200ECD5CC /* SVGImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC546F2763841200ECD5CC /* SVGImageView.swift */; };
 		FFAE3E4D270899F200B2CC77 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E4C270899F200B2CC77 /* UITableViewExtension.swift */; };
 		FFAE3E632708A14300B2CC77 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		FFAE3E672708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E652708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift */; };
@@ -130,6 +131,7 @@
 		FF4E82CF274029870065C392 /* MonthPickerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MonthPickerView.storyboard; sourceTree = "<group>"; };
 		FF55A54F2761CFE9000567D7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FF55A5512761D013000567D7 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		FFAC546F2763841200ECD5CC /* SVGImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImageView.swift; sourceTree = "<group>"; };
 		FFAE3E4C270899F200B2CC77 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FFAE3E652708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoverCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFAE3E662708AA9100B2CC77 /* MainCoverCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCoverCardCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				AE2762CF2763029000A9719A /* UserDataController.swift */,
+				FFAC546F2763841200ECD5CC /* SVGImageView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				FFF6B4CF273FF95F007522A0 /* ScheduleListTableViewCell.swift in Sources */,
 				FFF6B4C9273FBBC9007522A0 /* OrderMenuButton.swift in Sources */,
 				AE86C99527610E5600D0AC11 /* LoginViewController.swift in Sources */,
+				FFAC54702763841200ECD5CC /* SVGImageView.swift in Sources */,
 				FFAE3E792708CE0E00B2CC77 /* UIViewExtension.swift in Sources */,
 				FFB85801272F753B001B12A1 /* MyPageButton.swift in Sources */,
 				FF3AA0E2274025670081A32F /* CoverCardView.swift in Sources */,

@@ -47,8 +47,8 @@ final class CoverCardView: UIView {
         guard let data = data else { return }
         coverImageView.load(data.imageUrl)
         data.attachedStickerList.forEach { sticker in
-            let stickerImageView = UIImageView()
-            stickerImageView.load(sticker.imageUrl)
+            let stickerImageView = SVGImageView()
+            stickerImageView.load(url: sticker.imageUrl)
             addSubview(stickerImageView)
             stickerImageView.snp.makeConstraints { make in
                 make.leading.equalToSuperview().offset(272 * sticker.stickerX / 100 - 50)
@@ -59,3 +59,5 @@ final class CoverCardView: UIView {
         }
     }
 }
+
+
