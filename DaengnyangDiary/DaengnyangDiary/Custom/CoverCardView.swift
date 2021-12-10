@@ -41,16 +41,18 @@ final class CoverCardView: UIView {
         }
     }
     
-    func setData(month: Int, data: CoverData) {
+    func setData(month: Int, data: CoverData?) {
         monthImageView.image = monthImages[month]
+        
+        guard let data = data else { return }
         coverImageView.load(data.imageUrl)
         data.attachedStickerList.forEach { sticker in
             let stickerImageView = UIImageView()
             stickerImageView.load(sticker.imageUrl)
             addSubview(stickerImageView)
             stickerImageView.snp.makeConstraints { make in
-                make.leading.equalToSuperview().offset(272 * sticker.stickerX - 50)
-                make.top.equalToSuperview().offset(364 * sticker.stickerY - 50)
+                make.leading.equalToSuperview().offset(272 * sticker.stickerX / 100 - 50)
+                make.top.equalToSuperview().offset(364 * sticker.stickerY / 100 - 50)
                 make.height.equalTo(100)
                 make.width.equalTo(100)
             }

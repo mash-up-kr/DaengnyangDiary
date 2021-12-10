@@ -18,13 +18,15 @@ extension DiaryAPI: TargetType {
 
     var path: String {
         switch self {
-        case .write:            return "/api/v1/diary"
+        case .write:
+            return "/api/v1/diary"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .write:            return .post
+        case .write:
+            return .post
         }
     }
 

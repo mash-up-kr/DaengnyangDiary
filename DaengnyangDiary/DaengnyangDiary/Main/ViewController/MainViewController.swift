@@ -23,6 +23,7 @@ final class MainViewController: BaseViewController<MainViewModel> {
     override func viewDidLoad() {
         setViewModel(MainViewModel())
         super.viewDidLoad()
+        viewModel.delegate = self
         viewModel.inputRelay.accept(.requestCoverData)
         scheduleListTableView.registerNibCell(ScheduleListTableViewCell.self)
     }
@@ -70,8 +71,8 @@ final class MainViewController: BaseViewController<MainViewModel> {
             vc.delegate = self
             vc.modalPresentationStyle = .overCurrentContext
             present(vc, animated: false, completion: nil)
-        case .settingCover:
-            collectionView.reloadData()
+        case .nothing:
+            break
         }
     }
     
@@ -97,6 +98,12 @@ extension MainViewController: MonthPickerViewControllerDelegate {
         viewModel.selectedYear = year
         viewModel.selectedMonth = month
         collectionView.scrollToItem(at: IndexPath(row: month - 1, section: 0), at: .left, animated: true)
+    }
+}
+
+extension MainViewController: MainViewModelDelegate {
+    func reloadData() {
+        collectionView.reloadData()
     }
 }
 
@@ -152,7 +159,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusable(MainCoverCardCollectionViewCell.self, for: indexPath)
-        cell.setData(month: indexPath.row + 1, data: CoverData(imageUrl: "https://source.unsplash.com/Qb7D1xw28Co", attachedStickerList: [AttachedStickerList(imageUrl: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b093aa11-89b9-490f-b43d-2e7512f14450/img_flower_1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211113%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211113T210019Z&X-Amz-Expires=86400&X-Amz-Signature=6fd54c1b5a699e5e53792e0bcf6ebd829c16c192715091248fcb45ddb53645c4&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22img_flower_1.png%22", stickerX: 0.8, stickerY: 0.2), AttachedStickerList(imageUrl: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3fec47c6-6035-4bd3-8881-6ec980c305a6/img_heart_2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211113%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211113T210032Z&X-Amz-Expires=86400&X-Amz-Signature=923b41b07dec19aec0a0bf18572b332e3c4c730dda087f3418760e8c6bb104c1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22img_heart_2.png%22", stickerX: 0.2, stickerY: 0.8), AttachedStickerList(imageUrl: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fec06f49-9425-4cfb-96f1-cb373150cfb0/img_tree_1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211113%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211113T210036Z&X-Amz-Expires=86400&X-Amz-Signature=c6d58c13592cb52fb5758631e1deccfbd58e195a99dec7ab2ea90175e2877d10&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22img_tree_1.png%22", stickerX: 0.9, stickerY: 0.9)]))
+        cell.setData(month: indexPath.row + 1, data: viewModel.coverDataList[indexPath.row])
         return cell
     }
 }

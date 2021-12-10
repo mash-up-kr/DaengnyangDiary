@@ -19,31 +19,42 @@ extension CoverAPI: TargetType {
 
     var path: String {
         switch self {
-        case .save:                 return "/api/v1/cover"
-        case .home(let targetDate): return "/api/v1/cover/\(targetDate)"
+        case .save:
+            return "/api/v1/cover"
+        case .home(let targetDate):
+            return "/api/v1/cover/\(targetDate)"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .save:                 return .get
-        case .home:                 return .post
+        case .save:
+            return .post
+        case .home:
+            return .get
         }
     }
 
     var task: Task {
         switch self {
-        case .save(let coverDate):  return .requestPlain // 서버 데이터 확인 후, 변경 필요
-        case .home:                 return .requestPlain
+        case .save(let coverDate):
+            return .requestPlain // 서버 데이터 확인 후, 변경 필요
+        case .home:
+            return .requestPlain
         }
     }
 
     var headers: [String : String]? {
-        var header = BasicAPI.headers
-        if let token = UserDataController.token {
-            header["eclass-auth-token"] = token
+        switch self {
+        case .save(let coverDate):
+            var header = BasicAPI.headers
+            if let token = UserDataController.token {
+                header["eclass-auth-token"] = token
+            }
+            return header
+        case .home:
+            return [:]
         }
-        return header
     }
 
     var sampleData: Data { Data() }
