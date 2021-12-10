@@ -65,12 +65,12 @@ final class DaengnyangWebView: WKWebView {
     }
 
     func updateToken() {
-        guard let token = UserDataController.token else { return }
+//        guard let token = UserDataController.token else { return }
         let jsSource =
         """
         Mobile = {
             getToken() {
-                return "\(token)";
+                return "\(1234567890)";
             }
         }
         """
