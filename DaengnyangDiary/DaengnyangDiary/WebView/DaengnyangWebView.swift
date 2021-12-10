@@ -65,16 +65,12 @@ final class DaengnyangWebView: WKWebView {
     }
 
     func updateToken() {
+        guard let token = UserDataController.token else { return }
         let jsSource =
-//                """
-//                (function(){
-//                    window.Mobile.updateToken('\(123456)');
-//                })();
-//                """ // 토큰 받은 후 처리 값 셋팅
         """
         Mobile = {
             getToken() {
-                return "\(1234567890)";
+                return "\(token)";
             }
         }
         """
@@ -99,7 +95,7 @@ extension DaengnyangWebView {
 extension DaengnyangWebView: WKScriptMessageHandler {
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        print("@@@@@ didCall Message: \(message.name)")
+        print("DaengnyangWebView didReceive message: \(message.name)")
     }
 
 }
@@ -110,7 +106,6 @@ extension DaengnyangWebView: WKNavigationDelegate {
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        //self.evaluateJavaScript(Self.webViewJsSource, completionHandler: nil)
     }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -120,17 +115,4 @@ extension DaengnyangWebView: WKNavigationDelegate {
 }
 
 extension DaengnyangWebView: WKUIDelegate {
-}
-
-extension DaengnyangWebView {
-
-    static var webViewJsSource: String {
-        """
-        (function(){
-            window.token = "{토큰}";                   // 토큰 셋팅 후
-            var event = new Event('dataLodeded');
-            document.dispatchEvent(zepetoEvent);    // reload
-        }
-        """
-    }
 }
