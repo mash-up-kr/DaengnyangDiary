@@ -25,13 +25,13 @@ final class MainViewController: BaseViewController<MainViewModel> {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.inputRelay.accept(.requestCoverData)
-        scheduleListTableView.registerNibCell(ScheduleListTableViewCell.self)
+//        scheduleListTableView.registerNibCell(ScheduleListTableViewCell.self)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         configureCollectionView()
-        configureScheduleListView()
+//        configureScheduleListView()
         
     }
     
@@ -47,12 +47,12 @@ final class MainViewController: BaseViewController<MainViewModel> {
             .bind(to: viewModel.inputRelay)
             .disposed(by: bag)
         
-        orderButton.rx.tap
-            .bind { [weak self] in
-                self?.orderListStackView.isHidden = !(self?.orderListStackView.isHidden ?? false)
-                self?.orderButton.isClicked = !(self?.orderButton.isClicked ?? false)
-            }
-            .disposed(by: bag)
+//        orderButton.rx.tap
+//            .bind { [weak self] in
+//                self?.orderListStackView.isHidden = !(self?.orderListStackView.isHidden ?? false)
+//                self?.orderButton.isClicked = !(self?.orderButton.isClicked ?? false)
+//            }
+//            .disposed(by: bag)
     }
     
     override func viewModelBinding() {
@@ -80,10 +80,10 @@ final class MainViewController: BaseViewController<MainViewModel> {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var selectYearButton: SelectYearButton!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var scheduleListTableView: UITableView!
-    @IBOutlet weak var scheduleListTableViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var orderButton: SelectOrderButton!
-    @IBOutlet weak var orderListStackView: UIStackView!
+//    @IBOutlet weak var scheduleListTableView: UITableView!
+//    @IBOutlet weak var scheduleListTableViewHeight: NSLayoutConstraint!
+//    @IBOutlet weak var orderButton: SelectOrderButton!
+//    @IBOutlet weak var orderListStackView: UIStackView!
     
     private let cellWidth: CGFloat = 290
     private let cellHeight: CGFloat = 395
@@ -130,13 +130,13 @@ extension MainViewController {
         collectionView.scrollToItem(at: IndexPath(row: viewModel.selectedMonth - 1, section: 0), at: .left, animated: false)
     }
     
-    private func configureScheduleListView() {
-        scheduleListTableViewHeight.constant = scheduleListTableView.contentSize.height
-        scheduleListTableView.setCornerRadius(radius: 12)
-        scheduleListTableView.delegate = self
-        scheduleListTableView.dataSource = self
-        orderListStackView.isHidden = true
-    }
+//    private func configureScheduleListView() {
+//        scheduleListTableViewHeight.constant = scheduleListTableView.contentSize.height
+//        scheduleListTableView.setCornerRadius(radius: 12)
+//        scheduleListTableView.delegate = self
+//        scheduleListTableView.dataSource = self
+//        orderListStackView.isHidden = true
+//    }
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
