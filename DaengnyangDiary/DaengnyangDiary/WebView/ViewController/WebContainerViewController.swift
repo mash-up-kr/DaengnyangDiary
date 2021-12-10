@@ -10,6 +10,10 @@ import WebKit
 
 final class WebContainerViewController: UIViewController {
 
+    @IBAction func test(_ sender: UIButton) {
+        self.webView?.updateToken()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupWebView()

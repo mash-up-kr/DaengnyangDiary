@@ -25,10 +25,21 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djA-nb-aCg">
+                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="test:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4KS-2s-VPG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="djA-nb-aCg" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="JNQ-bD-uHS"/>
+                            <constraint firstItem="djA-nb-aCg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JZw-e7-7bc"/>
                             <constraint firstItem="xkW-9j-j5C" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="a7a-kl-VgS"/>
                             <constraint firstAttribute="trailing" secondItem="xkW-9j-j5C" secondAttribute="trailing" id="b7z-8q-64X"/>
                             <constraint firstAttribute="bottom" secondItem="xkW-9j-j5C" secondAttribute="bottom" id="nz0-cR-y5I"/>
@@ -50,6 +61,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xCV-0q-qZh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PAI-EM-1j9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -15,6 +15,7 @@ final class DaengnyangWebView: WKWebView {
         self.setupDelegates()
         self.setupProperties()
         self.setupConfiguration()
+        self.updateToken()
     }
 
     required init?(coder: NSCoder) {
@@ -22,6 +23,7 @@ final class DaengnyangWebView: WKWebView {
         self.setupDelegates()
         self.setupProperties()
         self.setupConfiguration()
+        self.updateToken()
     }
 
     override func willMove(toSuperview newSuperview: UIView?) {
@@ -62,6 +64,19 @@ final class DaengnyangWebView: WKWebView {
         self.configuration.userContentController = WKUserContentController()
     }
 
+    func updateToken() {
+        guard let token = UserDataController.token else { return }
+        let jsSource =
+        """
+        Mobile = {
+            getToken() {
+                return "\(token)";
+            }
+        }
+        """
+        self.evaluateJavaScript(jsSource, completionHandler: nil)
+    }
+
     private static let javaScriptMessageName = ""
 
 }
@@ -80,7 +95,7 @@ extension DaengnyangWebView {
 extension DaengnyangWebView: WKScriptMessageHandler {
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        print("@@@@@ didCall Message: \(message.name)")
+        print("DaengnyangWebView didReceive message: \(message.name)")
     }
 
 }
@@ -91,7 +106,6 @@ extension DaengnyangWebView: WKNavigationDelegate {
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        self.evaluateJavaScript(Self.webViewJsSource, completionHandler: nil)
     }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -101,17 +115,4 @@ extension DaengnyangWebView: WKNavigationDelegate {
 }
 
 extension DaengnyangWebView: WKUIDelegate {
-}
-
-extension DaengnyangWebView {
-
-    static var webViewJsSource: String {
-        """
-        (function(){
-            window.token = {토큰};                   // 토큰 셋팅 후
-            var event = new Event('dataLodeded');
-            document.dispatchEvent(zepetoEvent);    // reload
-        }
-        """
-    }
 }

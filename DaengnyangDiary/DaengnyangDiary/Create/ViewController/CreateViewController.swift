@@ -15,23 +15,12 @@ struct Login: Codable {
 
 final class CreateViewController: UIViewController {
 
-    let disposebag = DisposeBag()
-
-    func test() {
-        NetworkProvider.request(apiType: BasicService.basic).subscribe { (data: Login) in
-            print("@@@@@@ data: \(data)")
-        } onError: { error in
-            print("@@@@@@ error: \(error)")
-        }.disposed(by: self.disposebag)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupDateLabel()
         self.setupAddImageButton()
         self.setupTextView()
         self.setupImagePicker()
-        self.test()
     }
 
     @IBAction private func didTapAddImageButton(_ sender: UIButton) {
@@ -46,7 +35,6 @@ final class CreateViewController: UIViewController {
     }
 
     @IBAction private func didTapConfirmButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
     }
 
     private func setupDateLabel() {
@@ -101,6 +89,8 @@ final class CreateViewController: UIViewController {
         }
     }
 
+    private let disposebag = DisposeBag()
+    private let viewModel = CreateViewModel()
     private let imagePicker = UIImagePickerController()
 
     @IBOutlet private weak var imageView: UIImageView?
