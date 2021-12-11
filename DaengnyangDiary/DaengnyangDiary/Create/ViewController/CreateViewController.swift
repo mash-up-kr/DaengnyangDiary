@@ -129,6 +129,7 @@ extension CreateViewController: UIImagePickerControllerDelegate, UINavigationCon
             selectedImage = possibleImage
         }
         self.imageView?.image = selectedImage
+        self.addImageButton?.alpha = 0.1
         picker.dismiss(animated: true, completion: nil)
     }
 

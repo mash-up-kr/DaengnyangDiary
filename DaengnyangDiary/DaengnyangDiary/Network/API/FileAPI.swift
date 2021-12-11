@@ -18,7 +18,7 @@ extension FileAPI: TargetType {
 
     var path: String {
         switch self {
-        case .save:                 return "/api/v1/cover"
+        case .save:                 return "/api/v1/file/image"
         }
     }
 
@@ -31,7 +31,7 @@ extension FileAPI: TargetType {
     var task: Task {
         switch self {
         case let .save(imageData, fileName):
-            let data = MultipartFormData(provider: .data(imageData), name: "imageFile", fileName: "\(fileName).png", mimeType: "image/png")
+            let data = MultipartFormData(provider: .data(imageData), name: "imageFiles", fileName: "\(fileName).png", mimeType: "image/png")
             return .uploadMultipart([data])
         }
     }

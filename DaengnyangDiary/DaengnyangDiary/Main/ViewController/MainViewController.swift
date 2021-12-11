@@ -27,7 +27,7 @@ final class MainViewController: BaseViewController<MainViewModel> {
         viewModel.inputRelay.accept(.requestCoverData)
 //        scheduleListTableView.registerNibCell(ScheduleListTableViewCell.self)
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         configureCollectionView()
@@ -75,7 +75,7 @@ final class MainViewController: BaseViewController<MainViewModel> {
             break
         }
     }
-    
+
     // MARK: - IBOutlet
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var selectYearButton: SelectYearButton!

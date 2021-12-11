@@ -15,12 +15,15 @@
 		AE2762D92763031500A9719A /* DiaryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2762D82763031500A9719A /* DiaryAPI.swift */; };
 		AE2762DD2763034600A9719A /* FileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2762DC2763034600A9719A /* FileAPI.swift */; };
 		AE41DFC72763064B00EBB0A7 /* PetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41DFC62763064B00EBB0A7 /* PetAPI.swift */; };
+		AE41DFC9276357C500EBB0A7 /* MemberAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41DFC8276357C500EBB0A7 /* MemberAPI.swift */; };
 		AE86C98F27610E2700D0AC11 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE86C98E27610E2700D0AC11 /* JoinViewController.swift */; };
 		AE86C99127610E3700D0AC11 /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE86C99027610E3700D0AC11 /* JoinViewModel.swift */; };
 		AE86C99327610E3F00D0AC11 /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE86C99227610E3F00D0AC11 /* Join.storyboard */; };
 		AE86C99527610E5600D0AC11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE86C99427610E5600D0AC11 /* LoginViewController.swift */; };
 		AE86C99727610E5E00D0AC11 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE86C99627610E5E00D0AC11 /* LoginViewModel.swift */; };
 		AE86C99927610E6800D0AC11 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE86C99827610E6800D0AC11 /* Login.storyboard */; };
+		AEA2237427643AFA00E420D7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA2237327643AFA00E420D7 /* File.swift */; };
+		AEA22387276443F100E420D7 /* SVGImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA22385276443DB00E420D7 /* SVGImageView.swift */; };
 		CE975D3B2707FACD00FA2050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D3A2707FACD00FA2050 /* AppDelegate.swift */; };
 		CE975D3F2707FACD00FA2050 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE975D3E2707FACD00FA2050 /* MainViewController.swift */; };
 		CE975D422707FACD00FA2050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE975D402707FACD00FA2050 /* Main.storyboard */; };
@@ -55,7 +58,6 @@
 		FF4E82D0274029870065C392 /* MonthPickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4E82CF274029870065C392 /* MonthPickerView.storyboard */; };
 		FF55A5502761CFEA000567D7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55A54F2761CFE9000567D7 /* BaseViewController.swift */; };
 		FF55A5522761D013000567D7 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55A5512761D013000567D7 /* BaseViewModel.swift */; };
-		FFAC54702763841200ECD5CC /* SVGImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC546F2763841200ECD5CC /* SVGImageView.swift */; };
 		FFAE3E4D270899F200B2CC77 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E4C270899F200B2CC77 /* UITableViewExtension.swift */; };
 		FFAE3E632708A14300B2CC77 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		FFAE3E672708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE3E652708AA9100B2CC77 /* MainCoverCardCollectionViewCell.swift */; };
@@ -89,12 +91,15 @@
 		AE2762D82763031500A9719A /* DiaryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAPI.swift; sourceTree = "<group>"; };
 		AE2762DC2763034600A9719A /* FileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAPI.swift; sourceTree = "<group>"; };
 		AE41DFC62763064B00EBB0A7 /* PetAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetAPI.swift; sourceTree = "<group>"; };
+		AE41DFC8276357C500EBB0A7 /* MemberAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAPI.swift; sourceTree = "<group>"; };
 		AE86C98E27610E2700D0AC11 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		AE86C99027610E3700D0AC11 /* JoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
 		AE86C99227610E3F00D0AC11 /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		AE86C99427610E5600D0AC11 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AE86C99627610E5E00D0AC11 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AE86C99827610E6800D0AC11 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		AEA2237327643AFA00E420D7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		AEA22385276443DB00E420D7 /* SVGImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGImageView.swift; sourceTree = "<group>"; };
 		CE975D372707FACD00FA2050 /* DaengnyangDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaengnyangDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE975D3A2707FACD00FA2050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE975D3E2707FACD00FA2050 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -187,19 +192,11 @@
 				AE2762CC2763019300A9719A /* CoverAPI.swift */,
 				AE2762D1276302B100A9719A /* BadgeAPI.swift */,
 				AE2762D82763031500A9719A /* DiaryAPI.swift */,
+				AE41DFC8276357C500EBB0A7 /* MemberAPI.swift */,
 				AE41DFC62763064B00EBB0A7 /* PetAPI.swift */,
 				AE2762DC2763034600A9719A /* FileAPI.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		AE2762CE276301C100A9719A /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				AE2762CF2763029000A9719A /* UserDataController.swift */,
-				FFAC546F2763841200ECD5CC /* SVGImageView.swift */,
-			);
-			path = Util;
 			sourceTree = "<group>";
 		};
 		AE2762D3276302CD00A9719A /* Model */ = {
@@ -207,6 +204,7 @@
 			children = (
 				AE2762D4276302EA00A9719A /* User.swift */,
 				AE2762D6276302FF00A9719A /* DiaryWriteRequest.swift */,
+				AEA2237327643AFA00E420D7 /* File.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +229,14 @@
 			path = Join;
 			sourceTree = "<group>";
 		};
+		AEA22384276443CA00E420D7 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				FFAC546F2763841200ECD5CC /* SVGImageView.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		CE975D2E2707FACD00FA2050 = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +244,7 @@
 				CE975D382707FACD00FA2050 /* Products */,
 				18330EFF210A8720C289A1DC /* Pods */,
 				9B01A02D42AC723BD94BB815 /* Frameworks */,
+				AEA22384276443CA00E420D7 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,7 +263,6 @@
 				CE975D5127084E3000FA2050 /* Supporting Files */,
 				CE975D7B2708D59A00FA2050 /* WebView */,
 				FFAE3E612708A14300B2CC77 /* Extension */,
-				AE2762CE276301C100A9719A /* Util */,
 				CE975D4E27084CC800FA2050 /* Network */,
 				FFB8580C272F8020001B12A1 /* Custom */,
 				CE975D5527088A0500FA2050 /* Main */,
@@ -515,6 +521,8 @@
 			isa = PBXGroup;
 			children = (
 				FF55A54E2761CFD3000567D7 /* Base */,
+				AEA22385276443DB00E420D7 /* SVGImageView.swift */,
+				AE2762CF2763029000A9719A /* UserDataController.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -757,7 +765,6 @@
 				FFF6B4CF273FF95F007522A0 /* ScheduleListTableViewCell.swift in Sources */,
 				FFF6B4C9273FBBC9007522A0 /* OrderMenuButton.swift in Sources */,
 				AE86C99527610E5600D0AC11 /* LoginViewController.swift in Sources */,
-				FFAC54702763841200ECD5CC /* SVGImageView.swift in Sources */,
 				FFAE3E792708CE0E00B2CC77 /* UIViewExtension.swift in Sources */,
 				FFB85801272F753B001B12A1 /* MyPageButton.swift in Sources */,
 				FF3AA0E2274025670081A32F /* CoverCardView.swift in Sources */,
@@ -772,6 +779,8 @@
 				AE2762D02763029000A9719A /* UserDataController.swift in Sources */,
 				AE2762DD2763034600A9719A /* FileAPI.swift in Sources */,
 				AE2762D2276302B100A9719A /* BadgeAPI.swift in Sources */,
+				AEA22387276443F100E420D7 /* SVGImageView.swift in Sources */,
+				AE41DFC9276357C500EBB0A7 /* MemberAPI.swift in Sources */,
 				CE975D752708A36500FA2050 /* CreateBadgeSelectionViewController.swift in Sources */,
 				FF55A5522761D013000567D7 /* BaseViewModel.swift in Sources */,
 				CE975D5027084D7300FA2050 /* NetworkProvider.swift in Sources */,
@@ -780,6 +789,7 @@
 				AE2762D7276302FF00A9719A /* DiaryWriteRequest.swift in Sources */,
 				FFAE3E6F2708C31900B2CC77 /* ShowPickerViewButton.swift in Sources */,
 				AE2762CD2763019300A9719A /* CoverAPI.swift in Sources */,
+				AEA2237427643AFA00E420D7 /* File.swift in Sources */,
 				FFB857FF272A6E73001B12A1 /* imageAsset.swift in Sources */,
 				FFAE3E632708A14300B2CC77 /* (null) in Sources */,
 			);
@@ -929,8 +939,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AZX9TD66UC;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "DaengnyangDiary/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -939,6 +949,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mash-up.DaengnyangDiary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -950,8 +961,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AZX9TD66UC;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "DaengnyangDiary/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -960,6 +971,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mash-up.DaengnyangDiary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
